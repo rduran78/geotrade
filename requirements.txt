@@ -1,0 +1,11 @@
+duckdb
+esda
+geopandas
+libpysal
+matplotlib
+numpy
+pandas
+pyproj
+requests
+scikit-learn
+shapely
