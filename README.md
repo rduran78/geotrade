@@ -299,7 +299,7 @@ If you use this codebase or reproduce the analysis, please cite:
 
 Durán-Fernández, Roberto; García, Pablo; Figueroa, David.  
 GeoTrade: Global Trade Barycenter Analysis Pipeline.  
-Inter-American Development Bank Research Code Repository, 2026.  
+Code Repository, 2026.  
 GitHub: https://github.com/rduran78/geotrade
 
 ```bibtex
