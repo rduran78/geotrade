@@ -4,6 +4,17 @@ GeoTrade is a modular research pipeline for studying the geography of internatio
 
 The current codebase is the refactored production pipeline built in `Geoanalisis/` from the legacy notebook workflow in `trade/`. The legacy notebook remains intact; the modular pipeline is the maintained execution path.
 
+## Authors
+
+Roberto Durán-Fernández  
+Inter-American Development Bank
+
+Pablo García  
+Inter-American Development Bank
+
+David Figueroa  
+Université Paris I Panthéon-Sorbonne
+
 ## Project Overview
 
 The core research question is:
@@ -281,6 +292,36 @@ The final validated reference execution produced a complete run under `runs/trad
 - Stage 05 is baseline-compatible but remains the slowest stage in the current pipeline.
 - The modular pipeline preserves the legacy notebook as reference material, but the modular codebase is now the primary execution path.
 - Generated results are intentionally omitted from version control; users should expect to generate them locally.
+
+## Citation
+
+If you use this codebase or reproduce the analysis, please cite:
+
+Durán-Fernández, Roberto; García, Pablo; Figueroa, David.  
+GeoTrade: Global Trade Barycenter Analysis Pipeline.  
+Inter-American Development Bank Research Code Repository, 2026.  
+GitHub: https://github.com/rduran78/geotrade
+
+```bibtex
+@software{geotrade2026,
+author = {Durán-Fernández, Roberto and García, Pablo and Figueroa, David},
+title = {GeoTrade: Global Trade Barycenter Analysis Pipeline},
+institution = {Inter-American Development Bank},
+year = {2026},
+url = {https://github.com/rduran78/geotrade}
+}
+```
+
+## Acknowledgments
+
+Trade data are sourced from:
+
+Harvard Growth Lab at Harvard University, The. 2025.  
+“Bilateral Trade Data Aggregated by Year.”  
+Harvard Dataverse.  
+https://doi.org/10.7910/DVN/5NGVOB
+
+Geographic data are derived from the Natural Earth dataset.
 
 ## License / Notes
 
