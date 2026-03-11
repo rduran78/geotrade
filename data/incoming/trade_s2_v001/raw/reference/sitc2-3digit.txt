@@ -1,0 +1,241 @@
+sitc3	sitc3_name	nickname3
+001	Live animals chiefly for food	Food Animals
+011	Meat and edible meat offal, fresh, chilled or frozen	Fresh Meat
+012	Meat and edible meat offal, in brine, dried, salted or smoked	Preserved Meat
+014	Meat and edible meat offal, prepared, preserved, nes; fish extracts	Prep Meat
+022	Milk and cream	Milk
+023	Butter	Butter
+024	Cheese and curd	Cheese
+025	Eggs, birds', and egg yolks, fresh, dried or preserved	Eggs
+034	Fish, fresh, chilled or frozen	Fresh Fish
+035	Fish, dried, salted or in brine; smoked fish	Preserved Fish
+036	Crustaceans and molluscs, fresh, chilled, frozen, salted, etc	Shellfish
+037	Fish, crustaceans and molluscs, prepared or preserved, nes	Prep Seafood
+041	Wheat and meslin, unmilled	Wheat
+042	Rice	Rice
+043	Barley, unmilled	Barley
+044	Maize, unmilled	Maize
+045	Cereals, unmilled	Cereals
+046	Meal and flour of wheat and flour of meslin	Wheat Flour
+047	Other cereal meals and flour	Cereal Flour
+048	Cereal, flour or starch preparations of fruits or vegetables	Cereal Prep
+054	Vegetables, fresh or simply preserved; roots and tubers, nes	Fresh Veg
+056	Vegetables, roots and tubers, prepared or preserved, nes	Preserved Veg
+057	Fruit and nuts, fresh, dried	Fruit & Nuts
+058	Fruit, preserved, and fruits preparations	Fruit Prep
+061	Sugar and honey	Sugar
+062	Sugar confectionery and preparations, non-chocolate	Confectionery
+071	Coffee and coffee substitutes	Coffee
+072	Cocoa	Cocoa
+073	Chocolate and other preparations containing cocoa, nes	Chocolate
+074	Tea and mate	Tea
+075	Spices	Spices
+081	Feeding stuff for animals (not including unmilled cereals)	Animal Feed
+091	Margarine and shortening	Margarine
+098	Edible products and preparations, nes	Edibles
+111	Non-alcoholic beverages, nes	Soft Drinks
+112	Alcoholic beverages	Alcohol
+121	Tobacco unmanufactured; tobacco refuse	Raw Tobacco
+122	Tobacco, manufactured	Tobacco
+211	Hides and skins, excluding furs, raw	Raw Hides
+212	Furskins, raw	Raw Furs
+222	Seeds and oleaginous fruit, whole or broken, for 'soft' fixed oil	Soft Oilseeds
+223	Seeds and oleaginous fruit, whole or broken, for other fixed oils	Other Oilseeds
+232	Natural rubber latex; rubber and gums	Natural Rubber
+233	Synthetic rubber, latex, etc; waste, scrap of unhardened rubber	Synthetic Rubber
+244	Cork, natural, raw and waste	Raw Cork
+245	Fuel wood and wood charcoal	Fuel Wood
+246	Pulpwood (including chips and wood waste)	Pulpwood
+247	Other wood in the rough or roughly squared	Rough Wood
+248	Wood, simply worked, and railway sleepers of wood	Worked Wood
+251	Pulp and waste paper	Pulp & Waste
+261	Silk	Silk
+263	Cotton	Cotton
+264	Jute, other textile bast fibres, nes, raw, processed but not spun	Jute
+265	Vegetable textile fibres, excluding cotton, jute, and waste	Vegetable Fibres
+266	Synthetic fibres suitable for spinning	Synthetic Fibres
+267	Other man-made fibres suitable for spinning, and waste	Man‑Made Fibres
+268	Wool and other animal hair (excluding tops)	Wool
+269	Old clothing and other old textile articles; rags	Used Textiles
+271	Fertilizers, crude	Crude Fertilizers
+273	Stone, sand and gravel	Stone & Gravel
+274	Sulphur and unroasted iron pyrites	Sulphur
+277	Natural abrasives, nes	Abrasives
+278	Other crude minerals	Other Minerals
+281	Iron ore and concentrates	Iron Ore
+282	Waste and scrap metal of iron or steel	Steel Scrap
+286	Ores and concentrates of uranium and thorium	Nuclear Ores
+287	Ores and concentrates of base metals, nes	Base Metal Ores
+288	Non-ferrous base metal waste and scrap, nes	Non‑Ferrous Scrap
+289	Ores and concentrates of precious metals, waste, scrap	Precious Ores
+291	Crude animal materials, nes	Animal Materials
+292	Crude vegetable materials, nes	Vegetable Materials
+322	Coal, lignite and peat	Coal & Peat
+323	Briquettes; coke and semi-coke; lignite or peat; retort carbon	Coke
+333	Crude petroleum and oils obtained from bituminous minerals	Crude Oil
+334	Petroleum products, refined	Refined Oil
+335	Residual petroleum products, nes and related materials	Residual Oil
+341	Gas, natural and manufactured	Gas
+351	Electric current	Electricity
+411	Animal oils and fats	Animal Oils
+423	Fixed vegetable oils, soft, crude refined or purified	Soft Veg Oils
+424	Other fixed vegetable oils, fluid or solid, crude, refined	Other Veg Oils
+431	Animal and vegetable oils and fats, processed, and waxes	Processed Oils
+511	Hydrocarbons, nes, and derivatives	Hydrocarbons
+512	Alcohols, phenols etc, and their derivatives	Alcohols
+513	Carboxylic acids, and their derivatives	Carboxylic Acids
+514	Nitrogen-function compounds	Nitrogen Compounds
+515	Organo-inorganic and heterocyclic compounds	Heterocyclics
+516	Other organic chemicals	Organic Chems
+522	Inorganic chemical elements, oxides and halogen salts	Inorganic Chems
+523	Other inorganic chemicals; compounds of precious metals	Inorganic Compounds
+524	Radioactive and associated material	Radioactive Mats
+531	Synthetic dye, natural indigo, lakes	Dyes
+532	Dyeing and tanning extracts, and synthetic tanning materials	Tanning Extracts
+533	Pigments, paints, varnishes and related materials	Pigments
+541	Medicinal and pharmaceutical products	Pharma
+551	Essential oils, perfume and flavour materials	Essential Oils
+553	Perfumery, cosmetics, toilet preparations, etc	Cosmetics
+554	Soap, cleansing and polishing preparations	Soaps
+562	Fertilizers, manufactured	Fertilizers
+572	Explosives and pyrotechnic products	Explosives
+582	Condensation, polycondensation and polyaddition products	Condensation Polymers
+583	Polymerization and copolymerization products	Polymer Resins
+584	Regenerated cellulose; derivatives of cellulose; vulcanized fibre	Cellulose Derivatives
+585	Other artificial resins and plastic materials	Resins
+591	Pesticides, disinfectants	Pesticides
+592	Starches, insulin and wheat gluten; albuminoidal substances; glues	Starches & Glues
+598	Miscellaneous chemical products, nes	Chem Products
+611	Leather	Leather
+612	Manufactures of leather or of composition leather, nes; etc	Leather Goods
+613	Furskins, tanned or dressed; pieces of furskin, tanned or dressed	Dressed Furs
+621	Materials of rubber	Rubber Mats
+625	Rubber tires, tire cases, inner and flaps, for wheels of all kinds	Tires
+628	Articles of rubber, nes	Rubber Goods
+633	Cork manufactures	Cork Goods
+634	Veneers, plywood, "improved" wood and other wood, worked, nes	Plywood
+635	Wood manufactures, nes	Wood Goods
+641	Paper and paperboard	Paper
+642	Paper and paperboard, precut, and articles of paper or paperboard	Paper Goods
+651	Textile yarn	Yarn
+652	Cotton fabrics, woven (not including narrow or special fabrics)	Cotton Fabrics
+653	Fabrics, woven, of man-made fibres (not narrow or special fabrics)	MMF Fabrics
+654	Textile fabrics, woven, other than cotton or man-made fibres	Other Fabrics
+655	Knitted or crocheted fabrics (including tubular, etc, fabrics)	Knits
+656	Tulle, lace, embroidery, ribbons, trimmings and other small wares	Lace & Trims
+657	Special textile fabrics and related products	Special Fabrics
+658	Made-up articles, wholly or chiefly of textile materials, nes	Made‑Up Textiles
+659	Floor coverings, etc	Floor Coverings
+661	Lime, cement, and fabricated construction materials	Cement
+662	Clay and refractory construction materials	Clay Materials
+663	Mineral manufactures, nes	Mineral Goods
+664	Glass	Glass
+665	Glassware	Glassware
+666	Pottery	Pottery
+667	Pearl, precious and semi-precious stones, unworked or worked	Precious Stones
+671	Pig and sponge iron, spiegeleisen, etc, and ferro-alloys	Ferro‑Alloys
+672	Ingots and other primary forms, of iron or steel	Iron Ingots
+673	Iron and steel bars, rods, shapes and sections	Steel Bars
+674	Universals, plates, and sheets, of iron or steel	Steel Sheets
+675	Hoop and strip of iron or steel, hot-rolled or cold-rolled	Steel Strip
+676	Rails and railway track construction materials, of iron or steel	Rails
+677	Iron or steel wire (excluding wire rod), not insulated	Steel Wire
+678	Tube, pipes and fittings, of iron or steel	Steel Pipes
+679	Iron, steel casting, forging and stamping, in the rough state, nes	Castings
+681	Silver, platinum and other metals of the platinum group	Platinum Metals
+682	Copper	Copper
+683	Nickel	Nickel
+684	Aluminium	Aluminium
+685	Lead	Lead
+686	Zinc	Zinc
+687	Tin	Tin
+688	Uranium depleted in U235, thorium, and alloys, nes; waste and scrap	Nuclear Metals
+689	Miscellaneous non-ferrous base metals, employed in metallurgy	NF Metals
+691	Structures and parts, nes, of iron, steel or aluminium	Metal Structures
+692	Metal containers for storage and transport	Metal Containers
+693	Wire products (excluding insulated electrical wire); fencing grills	Wire Goods
+694	Nails, screws, nuts, bolts, rivets, etc, of iron, steel or copper	Fasteners
+695	Tools for use in the hand or in machines	Tools
+696	Cutlery	Cutlery
+697	Household equipment of base metal, nes	Metal Household
+699	Manufactures of base metal, nes	Base Metal Goods
+711	Steam boilers and auxiliary plant; and parts thereof, nes	Boilers
+712	Steam engines, turbines	Turbines
+713	Internal combustion piston engines, and parts thereof, nes	Combustion Engines
+714	Engines and motors, non-electric; parts, nes; group 714, item 71888	Non‑Electric Engines
+716	Rotating electric plant and parts thereof, nes	Generators
+718	Other power generating machinery and parts thereof, nes	Power Machinery
+721	Agricultural machinery (excluding tractors) and parts thereof, nes	Agr Machinery
+722	Tractors (other than those falling in heading 74411 and 7832)	Tractors
+723	Civil engineering, contractors' plant and equipment and parts, nes	Civil Eng Equip
+724	Textile and leather machinery, and parts thereof, nes	Textile Machinery
+725	Paper and paper manufacture machinery, and parts thereof, nes	Paper Machinery
+726	Printing, bookbinding machinery, and parts thereof, nes	Printing Machinery
+727	Food-processing machines (non-domestic) and parts thereof, nes	Food Machinery
+728	Other machinery, equipment, for specialized industries; parts nes	Special Machinery
+736	Metalworking machine-tools, parts and accessories thereof, nes	Machine Tools
+737	Metalworking machinery (other than machine-tools), and parts, nes	Metalworking Equip
+741	Heating and cooling equipment and parts thereof, nes	HVAC
+742	Pumps for liquids; liquid elevators; and parts thereof, nes	Liquid Pumps
+743	Pumps, compressors; centrifuges; filtering apparatus; etc, parts	Compressors
+744	Mechanical handling equipment, and parts thereof, nes	Handling Equip
+745	Other non-electric machinery, tools and mechanical apparatus, nes	Other Machinery
+749	Non-electric parts and accessories of machinery, nes	Machinery Parts
+751	Office machines	Office Machines
+752	Automatic data processing machines and units thereof	Computers
+759	Parts, nes of and accessories for machines of headings 751 or 752	Computer Parts
+761	Television receivers	TVs
+762	Radio-broadcast receivers	Radios
+763	Gramophones, dictating machines and other sound recorders	Sound Equip
+764	Telecommunication equipment, nes; parts and accessories, nes	Telecom
+771	Electric power machinery, and parts thereof, nes	Power Equip
+772	Electrical apparatus for making and breaking electrical circuits	Switchgear
+773	Equipment for distribution of electricity	Distribution Equip
+774	Electro-medical and radiological equipment	Med Electronics
+775	Household type equipment, nes	Home Electronics
+776	Thermionic, microcircuits, transistors, valves, etc	Semiconductors
+778	Electrical machinery and apparatus, nes	Electrical Equip
+781	Passenger motor vehicles (excluding buses)	Cars
+782	Lorries and special purposes motor vehicles	Lorries
+783	Road motor vehicles, nes	Other Vehicles
+784	Motor vehicle parts and accessories, nes	Auto Parts
+785	Cycles, scooters, motorized or not; invalid carriages	Bikes
+786	Trailers, and other vehicles, not motorized, nes	Trailers
+791	Railway vehicles and associated equipment	Rail
+792	Aircraft and associated equipment, and parts thereof, nes	Aircraft
+793	Ships, boats and floating structures	Ships
+812	Sanitary, plumbing, heating, lighting fixtures and fittings, nes	Fixtures
+821	Furniture and parts thereof	Furniture
+831	Travel goods, handbags etc, of leather, plastics, textile, others	Travel Goods
+842	Men's and boys' outerwear, textile fabrics not knitted or crocheted	Menswear
+843	Womens, girls, infants outerwear, textile, not knitted or crocheted	Womenswear
+844	Under garments of textile fabrics, not knitted or crocheted	Underwear Woven
+845	Outerwear knitted or crocheted, not elastic nor rubberized	Outerwear Knit
+846	Under-garments, knitted or crocheted	Underwear Knit
+847	Clothing accessories, of textile fabrics, nes	Accessories
+848	Articles of apparel, clothing accessories, non-textile, headgear	Headgear
+851	Footwear	Footwear
+871	Optical instruments and apparatus	Optics
+872	Medical instruments and appliances, nes	Med Instruments
+873	Meters and counters, nes	Meters
+874	Measuring, checking, analysis, controlling instruments, nes, parts	Measuring Equip
+881	Photographic apparatus and equipment, nes	Photo Equip
+882	Photographic and cinematographic supplies	Photo Supplies
+883	Cinematograph film, exposed and developed	Film
+884	Optical goods nes	Optical Goods
+885	Watches and clocks	Watches
+892	Printed matter	Printed Matter
+893	Articles, nes of plastic materials	Plastics
+894	Baby carriages, toys, games and sporting goods	Toys
+895	Office and stationary supplies, nes	Stationery
+896	Works of art, collectors' pieces and antiques	Art
+897	Gold, silver ware, jewelry and articles of precious materials, nes	Jewelry
+898	Musical instruments, parts and accessories thereof	Music Instruments
+899	Other miscellaneous manufactured articles, nes	Misc Goods
+911	Postal packages not classified according to kind	Postal
+931	Special transactions, commodity not classified according to class	Special
+941	Animals, live, nes, (including zoo animals, pets, insects, etc)	Other Animals
+951	Armoured fighting vehicles, war firearms, ammunition, parts, nes	Arms
+961	Coin (other than gold coin), not being legal tender	Coins
+971	Gold, non-monetary (excluding gold ores and concentrates)	Gold
+XXX	NA	NA

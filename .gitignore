@@ -1,0 +1,46 @@
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.DS_Store
+.env
+
+# Local virtual environments
+.venv/
+venv/
+
+# Temporary files and local caches
+*.tmp
+*.cache
+*.sqlite
+*.pkl
+*.log
+
+# Generated outputs
+runs/
+artifacts/
+reports/
+logs/
+
+# Raw datasets and downloaded externals
+*.parquet
+data/incoming/*/raw/dataverse_files/
+data/external/
+
+# Generated tabular and figure outputs
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+
+# Keep only lightweight reference inputs under data/
+!data/
+!data/incoming/
+!data/incoming/*/
+!data/incoming/*/raw/
+!data/incoming/*/raw/reference/
+!data/incoming/*/raw/reference/**

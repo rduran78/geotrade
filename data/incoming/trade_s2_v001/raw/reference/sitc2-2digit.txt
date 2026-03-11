@@ -1,0 +1,71 @@
+sitc2	sitc2_name	nickname2
+00	Live animals chiefly for food	Livestock
+01	Meat and preparations	Meat
+02	Dairy products and birds' eggs	Dairy & Eggs
+03	Fish, crustacean and molluscs, and preparations thereof	Fish & Seafood
+04	Cereals and cereal preparations	Cereals
+05	Vegetables and fruit	Fruit & Veg
+06	Sugar, sugar preparations and honey	Sugar & Honey
+07	Coffee, tea, cocoa, spices, and manufactures thereof	Coffee/Tea/Cocoa
+08	Feeding stuff for animals (not including unmilled cereals)	Animal Feed
+09	Miscellaneous edible products and preparations	Processed Foods
+11	Beverages	Beverages
+12	Tobacco and tobacco manufactures	Tobacco
+21	Hides, skins and furskins, raw	Raw Hides
+22	Oil seeds and oleaginous fruit	Oilseeds
+23	Crude rubber (including synthetic and reclaimed)	Crude Rubber
+24	Cork and wood	Cork & Wood
+25	Pulp and waste paper	Pulp & Wastepaper
+26	Textile fibres (not wool tops) and their wastes (not in yarn)	Textile Fibres
+27	Crude fertilizer and crude minerals	Crude Minerals
+28	Metalliferous ores and metal scrap	Ores & Scrap
+29	Crude animal and vegetable materials, nes	Crude Materials n.e.s.
+32	Coal, coke and briquettes	Coal & Coke
+33	Petroleum, petroleum products and related materials	Petroleum & Products
+34	Gas, natural and manufactured	Gas
+35	Electric current	Electricity
+41	Animal oils and fats	Animal Fats
+42	Fixed vegetable oils and fats	Veg Oils
+43	Animal and vegetable oils and fats, processed, and waxes	Processed Oils & Waxes
+51	Organic chemicals	Organic Chemicals
+52	Inorganic chemicals	Inorganic Chemicals
+53	Dyeing, tanning and colouring materials	Dyes & Tanning
+54	Medicinal and pharmaceutical products	Pharma
+55	Oils and perfume materials; toilet and cleansing preparations	Perfumes & Toiletries
+56	Fertilizers, manufactured	Fertilizers
+57	Explosives and pyrotechnic products	Explosives
+58	Artificial resins and plastic materials, and cellulose esters etc	Plastics & Resins
+59	Chemical materials and products, nes	Chemicals n.e.s.
+61	Leather, leather manufactures, nes, and dressed furskins	Leather Goods
+62	Rubber manufactures, nes	Rubber Goods
+63	Cork and wood, cork manufactures	Wood Manufactures
+64	Paper, paperboard, and articles of pulp, of paper or of paperboard	Paper & Board
+65	Textile yarn, fabrics, made-up articles, nes, and related products	Textile Inputs
+66	Non-metallic mineral manufactures, nes	Non‑Metallic Manufactures
+67	Iron and steel	Iron & Steel
+68	Non-ferrous metals	Non‑Ferrous Metals
+69	Manufactures of metals, nes	Metal Manufactures
+71	Power generating machinery and equipment	Power Machinery
+72	Machinery specialized for particular industries	Industrial Machinery
+73	Metalworking machinery	Metalworking Machinery
+74	General industrial machinery and equipment, nes, and parts of, nes	General Machinery
+75	Office machines and automatic data processing equipment	Office & Computing
+76	Telecommunications, sound recording and reproducing equipment	Telecom & Audio
+77	Electric machinery, apparatus and appliances, nes, and parts, nes	Electrical Equipment
+78	Road vehicles	Road Vehicles
+79	Other transport equipment	Other Transport
+81	Sanitary, plumbing, heating, lighting fixtures and fittings, nes	Building Fixtures
+82	Furniture and parts thereof	Furniture
+83	Travel goods, handbags and similar containers	Luggage & Bags
+84	Articles of apparel and clothing accessories	Apparel
+85	Footwear	Footwear
+87	Professional, scientific, controlling instruments, apparatus, nes	Scientific Instruments
+88	Photographic equipment and supplies, optical goods; watches, etc	Optical & Photo
+89	Miscellaneous manufactured articles, nes	Manufactures n.e.s.
+91	Postal packages not classified according to kind	Postal Packages
+93	Special transactions, commodity not classified according to class	Special Transactions
+94	Animals, live, nes, (including zoo animals, pets, insects, etc)	Live Animals n.e.s.
+95	Armoured fighting vehicles, war firearms, ammunition, parts, nes	Arms & Ammunition
+96	Coin (other than gold coin), not being legal tender	Coins (Non‑legal)
+97	Gold, non-monetary (excluding gold ores and concentrates)	Non‑Monetary Gold
+XX	NA	NA
