@@ -1,0 +1,2997 @@
+{
+  "metadata": {
+    "source": "canonical_pipeline",
+    "generated_at": "2026-03-19T14:14:26",
+    "naming_convention": "snake_case",
+    "project_root": "C:\\Python\\Geoanalisis",
+    "dataset_reference_run": "runs\\trade_s2_v001\\final"
+  },
+  "variables": {
+    "ARI_vs_full": {
+      "type": "float",
+      "category": "derived",
+      "description": "adjusted Rand index against the full clustering solution",
+      "is_canonical": true,
+      "usage_count_in_code": 10,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_bootstrap_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_window_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_bootstrap_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_window_detail.csv"
+      ]
+    },
+    "EW_index": {
+      "type": "float",
+      "category": "derived",
+      "description": "east-west directional drift index",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_imports_1976_2023.csv"
+      ]
+    },
+    "NMI_vs_full": {
+      "type": "float",
+      "category": "derived",
+      "description": "normalized mutual information against the full clustering solution",
+      "is_canonical": true,
+      "usage_count_in_code": 10,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_bootstrap_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_window_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_bootstrap_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_window_detail.csv"
+      ]
+    },
+    "P1_1977_1988_nobs": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of observations in a trajectory period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P1_1977_1988_x": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P1_1977_1988_y": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P1_1977_1988_z": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P2_1989_2001_nobs": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of observations in a trajectory period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P2_1989_2001_x": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P2_1989_2001_y": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P2_1989_2001_z": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P3_2002_2009_nobs": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of observations in a trajectory period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P3_2002_2009_x": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P3_2002_2009_y": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P3_2002_2009_z": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P4_2010_2018_nobs": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of observations in a trajectory period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P4_2010_2018_x": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P4_2010_2018_y": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P4_2010_2018_z": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P5_2019_2022_nobs": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of observations in a trajectory period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P5_2019_2022_x": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P5_2019_2022_y": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "P5_2019_2022_z": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory centroid coordinate component for a period segment",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "alpha_pos": {
+      "type": "float",
+      "category": "derived",
+      "description": "position-weight hyperparameter used in combined distances",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_clusters.csv"
+      ]
+    },
+    "assigned_from": {
+      "type": "string",
+      "category": "derived",
+      "description": "source used to assign a centroid or code mapping",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\country_centroids_augmented.csv"
+      ]
+    },
+    "attractor_type": {
+      "type": "string",
+      "category": "identifier",
+      "description": "unknown",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "avg_export_distance_km": {
+      "type": "float",
+      "category": "geographic",
+      "description": "average export distance in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 9,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_country_year_1976_2023.csv"
+      ]
+    },
+    "avg_import_distance_km": {
+      "type": "float",
+      "category": "geographic",
+      "description": "average import distance in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_country_year_1976_2023.csv"
+      ]
+    },
+    "avg_speed_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "average drift-step speed in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_imports_1976_2023.csv"
+      ]
+    },
+    "bearing_circ_var": {
+      "type": "float",
+      "category": "geographic",
+      "description": "circular variance of trajectory bearing",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "bearing_deg": {
+      "type": "float",
+      "category": "geographic",
+      "description": "step bearing in degrees",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_imports_1976_2023.csv"
+      ]
+    },
+    "bearing_mean_deg": {
+      "type": "float",
+      "category": "geographic",
+      "description": "mean trajectory bearing in degrees",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "bootstrap_ARI_vs_full_max": {
+      "type": "float",
+      "category": "derived",
+      "description": "maximum bootstrap ARI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "bootstrap_ARI_vs_full_mean": {
+      "type": "float",
+      "category": "derived",
+      "description": "mean bootstrap ARI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "bootstrap_ARI_vs_full_min": {
+      "type": "float",
+      "category": "derived",
+      "description": "minimum bootstrap ARI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "bootstrap_ARI_vs_full_std": {
+      "type": "float",
+      "category": "derived",
+      "description": "standard deviation of bootstrap ARI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "bootstrap_NMI_vs_full_max": {
+      "type": "float",
+      "category": "derived",
+      "description": "maximum bootstrap NMI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "bootstrap_NMI_vs_full_mean": {
+      "type": "float",
+      "category": "derived",
+      "description": "mean bootstrap NMI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "bootstrap_NMI_vs_full_min": {
+      "type": "float",
+      "category": "derived",
+      "description": "minimum bootstrap NMI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "bootstrap_NMI_vs_full_std": {
+      "type": "float",
+      "category": "derived",
+      "description": "standard deviation of bootstrap NMI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "canonical_column_count": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of canonical columns",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "canonical_columns": {
+      "type": "string",
+      "category": "derived",
+      "description": "list of canonical column names",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "ci_5": {
+      "type": "float",
+      "category": "derived",
+      "description": "lower simulation or inference interval bound",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "ci_95": {
+      "type": "float",
+      "category": "derived",
+      "description": "upper simulation or inference interval bound",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "cluster": {
+      "type": "int",
+      "category": "identifier",
+      "description": "unknown",
+      "is_canonical": true,
+      "usage_count_in_code": 52,
+      "observed_in_output_files": 8,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_convergence_summary.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_trajectory_sample.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "code": {
+      "type": "string",
+      "category": "identifier",
+      "description": "generic country or entity code",
+      "is_canonical": true,
+      "usage_count_in_code": 105,
+      "observed_in_output_files": 5,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes_from_natural_earth.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_natural_earth_codes_present.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_resolution_methods.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\country_centroids_augmented.csv"
+      ]
+    },
+    "column_name": {
+      "type": "string",
+      "category": "derived",
+      "description": "column name observed in a schema audit",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_long.csv"
+      ]
+    },
+    "column_type": {
+      "type": "string",
+      "category": "derived",
+      "description": "column type observed in a schema audit",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_long.csv"
+      ]
+    },
+    "commoditycode": {
+      "type": "string",
+      "category": "product",
+      "description": "product code from the raw trade dataset",
+      "is_canonical": true,
+      "usage_count_in_code": 11,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "data\\incoming\\trade_s2_v001\\raw\\dataverse_files\\S2_1976.parquet"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "category": "identifier",
+      "description": "country identifier used in stage outputs",
+      "is_canonical": true,
+      "usage_count_in_code": 115,
+      "observed_in_output_files": 20,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\country_trade_totals_value_final.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_Dcombo.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_Ddir.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_Dpos.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv"
+      ]
+    },
+    "country_code": {
+      "type": "string",
+      "category": "identifier",
+      "description": "dictionary country code value",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\dictionaries\\country_codes_all_sorted.csv"
+      ]
+    },
+    "destination": {
+      "type": "string",
+      "category": "identifier",
+      "description": "destination country code for distance matrix rows",
+      "is_canonical": true,
+      "usage_count_in_code": 11,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\OD_Matrix.csv"
+      ]
+    },
+    "dir_lat": {
+      "type": "float",
+      "category": "geographic",
+      "description": "directional attractor latitude",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "dir_lon": {
+      "type": "float",
+      "category": "geographic",
+      "description": "directional attractor longitude",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "dir_x": {
+      "type": "float",
+      "category": "geographic",
+      "description": "directional attractor x coordinate",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "dir_y": {
+      "type": "float",
+      "category": "geographic",
+      "description": "directional attractor y coordinate",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "dir_z": {
+      "type": "float",
+      "category": "geographic",
+      "description": "directional attractor z coordinate",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "dist_km": {
+      "type": "float",
+      "category": "geographic",
+      "description": "step distance in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_imports_1976_2023.csv"
+      ]
+    },
+    "distance_km": {
+      "type": "float",
+      "category": "geographic",
+      "description": "pairwise geographic distance in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 22,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\OD_Matrix.csv"
+      ]
+    },
+    "east_km": {
+      "type": "float",
+      "category": "geographic",
+      "description": "east-west signed step component in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_imports_1976_2023.csv"
+      ]
+    },
+    "end_year": {
+      "type": "int",
+      "category": "time",
+      "description": "last year in the observation sequence",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_imports_1976_2023.csv"
+      ]
+    },
+    "end_year_max": {
+      "type": "int",
+      "category": "derived",
+      "description": "maximum final year across countries in the grouped result",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "end_year_min": {
+      "type": "int",
+      "category": "derived",
+      "description": "minimum final year across countries in the grouped result",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "exp_not_locatable_codes": {
+      "type": "int",
+      "category": "derived",
+      "description": "export-side product or country codes without locatable geometry",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "exp_zero_share": {
+      "type": "float",
+      "category": "trade",
+      "description": "share of zero-valued export observations",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv"
+      ]
+    },
+    "exporter": {
+      "type": "string",
+      "category": "identifier",
+      "description": "ISO3 exporter country",
+      "is_canonical": true,
+      "usage_count_in_code": 22,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "data\\incoming\\trade_s2_v001\\raw\\dataverse_files\\S2_1976.parquet"
+      ]
+    },
+    "exports": {
+      "type": "float",
+      "category": "trade",
+      "description": "aggregate exports value",
+      "is_canonical": true,
+      "usage_count_in_code": 57,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\country_trade_totals_value_final.csv"
+      ]
+    },
+    "extra_vs_canonical": {
+      "type": "float",
+      "category": "derived",
+      "description": "extra columns versus the canonical schema",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_report.csv"
+      ]
+    },
+    "files_checked": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of files checked in schema validation",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "final_distance_to_star_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "final-year distance to the cluster attractor in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_trajectory_sample.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_trajectory_sample.csv"
+      ]
+    },
+    "flow": {
+      "type": "string",
+      "category": "identifier",
+      "description": "trade flow direction or trajectory family",
+      "is_canonical": true,
+      "usage_count_in_code": 159,
+      "observed_in_output_files": 21,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_bootstrap_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_convergence_summary.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_silhouette.csv"
+      ]
+    },
+    "global_export_distance_km": {
+      "type": "float",
+      "category": "geographic",
+      "description": "global average export distance in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc2_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc3_1976_2023.csv"
+      ]
+    },
+    "global_export_minus_import_distance_km": {
+      "type": "float",
+      "category": "geographic",
+      "description": "difference between global export and import average distances",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_1976_2023.csv"
+      ]
+    },
+    "global_exports_minus_imports": {
+      "type": "float",
+      "category": "trade",
+      "description": "difference between global exports and imports totals",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_1976_2023.csv"
+      ]
+    },
+    "global_import_distance_km": {
+      "type": "float",
+      "category": "geographic",
+      "description": "global average import distance in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc2_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc3_1976_2023.csv"
+      ]
+    },
+    "global_total_exports": {
+      "type": "float",
+      "category": "trade",
+      "description": "global total exports value",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_1976_2023.csv"
+      ]
+    },
+    "global_total_imports": {
+      "type": "float",
+      "category": "trade",
+      "description": "global total imports value",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_1976_2023.csv"
+      ]
+    },
+    "has_manual_centroid": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether a manual centroid exists for the code",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes_from_natural_earth.csv"
+      ]
+    },
+    "historic_code": {
+      "type": "string",
+      "category": "derived",
+      "description": "historic code under review",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_historic_mapping_report.csv"
+      ]
+    },
+    "historic_in_ne": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether the historic code appears in Natural Earth",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_historic_mapping_report.csv"
+      ]
+    },
+    "historic_in_your_codes": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether the historic code appears in the local code list",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_historic_mapping_report.csv"
+      ]
+    },
+    "historic_maps_to": {
+      "type": "string",
+      "category": "derived",
+      "description": "mapped target for a historic code",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes_from_natural_earth.csv"
+      ]
+    },
+    "historic_target_in_ne": {
+      "type": "string",
+      "category": "derived",
+      "description": "whether the historic mapped target exists in Natural Earth",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes_from_natural_earth.csv"
+      ]
+    },
+    "imp_not_locatable_codes": {
+      "type": "int",
+      "category": "derived",
+      "description": "import-side product or country codes without locatable geometry",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "imp_zero_share": {
+      "type": "float",
+      "category": "trade",
+      "description": "share of zero-valued import observations",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv"
+      ]
+    },
+    "importer": {
+      "type": "string",
+      "category": "identifier",
+      "description": "ISO3 importer country",
+      "is_canonical": true,
+      "usage_count_in_code": 22,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "data\\incoming\\trade_s2_v001\\raw\\dataverse_files\\S2_1976.parquet"
+      ]
+    },
+    "imports": {
+      "type": "float",
+      "category": "trade",
+      "description": "aggregate imports value",
+      "is_canonical": true,
+      "usage_count_in_code": 52,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\country_trade_totals_value_final.csv"
+      ]
+    },
+    "instability_index": {
+      "type": "float",
+      "category": "derived",
+      "description": "drift instability summary index",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_imports_1976_2023.csv"
+      ]
+    },
+    "is_historic": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether a code is flagged as historic",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes_from_natural_earth.csv"
+      ]
+    },
+    "is_territory_fallback": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether a territory fallback was used",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes_from_natural_earth.csv"
+      ]
+    },
+    "issue_files": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of files with schema issues",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "k": {
+      "type": "int",
+      "category": "derived",
+      "description": "candidate number of clusters",
+      "is_canonical": true,
+      "usage_count_in_code": 14,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_silhouette.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_silhouette.csv"
+      ]
+    },
+    "k_selected": {
+      "type": "int",
+      "category": "derived",
+      "description": "selected number of clusters",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_clusters.csv"
+      ]
+    },
+    "lat": {
+      "type": "float",
+      "category": "geographic",
+      "description": "latitude coordinate",
+      "is_canonical": true,
+      "usage_count_in_code": 53,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\country_centroids_augmented.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_state_long.csv"
+      ]
+    },
+    "lat_exports": {
+      "type": "float",
+      "category": "geographic",
+      "description": "export barycenter latitude",
+      "is_canonical": true,
+      "usage_count_in_code": 15,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "lat_imports": {
+      "type": "float",
+      "category": "geographic",
+      "description": "import barycenter latitude",
+      "is_canonical": true,
+      "usage_count_in_code": 15,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "lat_us_exports": {
+      "type": "float",
+      "category": "geographic",
+      "description": "legacy USA export barycenter latitude",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_usa_trade_1976_2023.csv"
+      ]
+    },
+    "lat_us_imports": {
+      "type": "float",
+      "category": "geographic",
+      "description": "legacy USA import barycenter latitude",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_usa_trade_1976_2023.csv"
+      ]
+    },
+    "linkage": {
+      "type": "string",
+      "category": "identifier",
+      "description": "hierarchical clustering linkage method",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_clusters.csv"
+      ]
+    },
+    "lon": {
+      "type": "float",
+      "category": "geographic",
+      "description": "longitude coordinate",
+      "is_canonical": true,
+      "usage_count_in_code": 61,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\country_centroids_augmented.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_state_long.csv"
+      ]
+    },
+    "lon_exports": {
+      "type": "float",
+      "category": "geographic",
+      "description": "export barycenter longitude",
+      "is_canonical": true,
+      "usage_count_in_code": 15,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "lon_imports": {
+      "type": "float",
+      "category": "geographic",
+      "description": "import barycenter longitude",
+      "is_canonical": true,
+      "usage_count_in_code": 15,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "lon_us_exports": {
+      "type": "float",
+      "category": "geographic",
+      "description": "legacy USA export barycenter longitude",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_usa_trade_1976_2023.csv"
+      ]
+    },
+    "lon_us_imports": {
+      "type": "float",
+      "category": "geographic",
+      "description": "legacy USA import barycenter longitude",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_usa_trade_1976_2023.csv"
+      ]
+    },
+    "mapped_target_in_natural_earth": {
+      "type": "string",
+      "category": "derived",
+      "description": "whether the mapped target exists in Natural Earth",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes.csv"
+      ]
+    },
+    "maps_to": {
+      "type": "string",
+      "category": "derived",
+      "description": "mapped replacement code",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_historic_mapping_report.csv"
+      ]
+    },
+    "mean_H0": {
+      "type": "float",
+      "category": "derived",
+      "description": "expected mean under the null hypothesis",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "mean_abs_turn_deg": {
+      "type": "float",
+      "category": "geographic",
+      "description": "mean absolute turning angle in degrees",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "mean_speed_km_per_year": {
+      "type": "float",
+      "category": "derived",
+      "description": "mean trajectory speed in kilometers per year",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "median_distance_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "median distance to attractor in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_convergence_summary.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_convergence_summary.csv"
+      ]
+    },
+    "median_speed_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "median drift-step speed in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_imports_1976_2023.csv"
+      ]
+    },
+    "method": {
+      "type": "string",
+      "category": "identifier",
+      "description": "unknown",
+      "is_canonical": true,
+      "usage_count_in_code": 17,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_resolution_methods.csv"
+      ]
+    },
+    "min_overlap_steps": {
+      "type": "int",
+      "category": "derived",
+      "description": "minimum overlapping steps required for pairwise comparison",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_clusters.csv"
+      ]
+    },
+    "min_overlap_years": {
+      "type": "int",
+      "category": "derived",
+      "description": "minimum overlapping years required for pairwise comparison",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_clusters.csv"
+      ]
+    },
+    "missing_files": {
+      "type": "float",
+      "category": "derived",
+      "description": "list of missing yearly files",
+      "is_canonical": true,
+      "usage_count_in_code": 7,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "missing_files_count": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of missing yearly files",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "missing_penalty_used": {
+      "type": "float",
+      "category": "derived",
+      "description": "penalty parameter applied for missing overlap",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_clusters.csv"
+      ]
+    },
+    "missing_required": {
+      "type": "float",
+      "category": "derived",
+      "description": "required columns missing from a yearly file",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_report.csv"
+      ]
+    },
+    "missing_vs_canonical": {
+      "type": "float",
+      "category": "derived",
+      "description": "columns missing versus the canonical schema",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_report.csv"
+      ]
+    },
+    "moran_i": {
+      "type": "float",
+      "category": "derived",
+      "description": "Moran I spatial autocorrelation statistic",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "n": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of observations in the modeled set",
+      "is_canonical": true,
+      "usage_count_in_code": 27,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "n_cols": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of columns detected in a yearly file",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_report.csv"
+      ]
+    },
+    "n_countries": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of countries represented in the grouped result",
+      "is_canonical": true,
+      "usage_count_in_code": 12,
+      "observed_in_output_files": 6,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_convergence_summary.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_trajectory_sample.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_convergence_summary.csv"
+      ]
+    },
+    "n_country_year_obs": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of country-year observations in the summary group",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_convergence_summary.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_convergence_summary.csv"
+      ]
+    },
+    "n_endpoints_used": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of endpoints used to estimate attractors",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "n_export_partners_total": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of export partners before matching",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "n_export_partners_unmatched": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of export partners without coordinates",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "n_exporter_nodes_matched": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of exporter nodes matched to coordinates",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "n_exporter_nodes_total": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of exporter nodes before geographic matching",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "n_exporter_nodes_unmatched": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of exporter nodes without coordinates",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "n_flows": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of trade flows processed in a diagnostic year",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_diagnostics_1976_2023.csv"
+      ]
+    },
+    "n_import_partners_total": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of import partners before matching",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "n_import_partners_unmatched": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of import partners without coordinates",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "n_importer_nodes_matched": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of importer nodes matched to coordinates",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "n_importer_nodes_total": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of importer nodes before geographic matching",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "n_importer_nodes_unmatched": {
+      "type": "int",
+      "category": "trade",
+      "description": "number of importer nodes without coordinates",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "n_lastdirs_used": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of last-direction vectors used to estimate attractors",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "n_missing_distance": {
+      "type": "float",
+      "category": "derived",
+      "description": "number of flows without distance information",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_diagnostics_1976_2023.csv"
+      ]
+    },
+    "n_obs": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of observations",
+      "is_canonical": true,
+      "usage_count_in_code": 10,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_trajectory_sample.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_trajectory_sample.csv"
+      ]
+    },
+    "n_steps": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of temporal steps",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_imports_1976_2023.csv"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "category": "derived",
+      "description": "entity name",
+      "is_canonical": true,
+      "usage_count_in_code": 13,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_natural_earth_codes_present.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\country_centroids_augmented.csv"
+      ]
+    },
+    "net_disp_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "net displacement in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "net_disp_rad": {
+      "type": "float",
+      "category": "derived",
+      "description": "net displacement in radians",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "ok": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether validation passed for a file",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_report.csv"
+      ]
+    },
+    "ok_files": {
+      "type": "int",
+      "category": "derived",
+      "description": "number of files passing schema validation",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "origin": {
+      "type": "string",
+      "category": "identifier",
+      "description": "origin country code for distance matrix rows",
+      "is_canonical": true,
+      "usage_count_in_code": 16,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\OD_Matrix.csv"
+      ]
+    },
+    "p_value": {
+      "type": "float",
+      "category": "trade",
+      "description": "p-value for the statistical test",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "path": {
+      "type": "string",
+      "category": "identifier",
+      "description": "resolution path or file path string",
+      "is_canonical": true,
+      "usage_count_in_code": 28,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_resolution_methods.csv"
+      ]
+    },
+    "path_len_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory path length in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 11,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_trajectory_sample.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_trajectory_sample.csv"
+      ]
+    },
+    "path_len_rad": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory path length in radians",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "product_code": {
+      "type": "int",
+      "category": "identifier",
+      "description": "dictionary product code value",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\dictionaries\\product_codes_all_sorted.csv"
+      ]
+    },
+    "q25_distance_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "25th percentile distance to attractor in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_convergence_summary.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_convergence_summary.csv"
+      ]
+    },
+    "q75_distance_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "75th percentile distance to attractor in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_convergence_summary.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_convergence_summary.csv"
+      ]
+    },
+    "readable": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether a file was readable during validation",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_report.csv"
+      ]
+    },
+    "resolution_method": {
+      "type": "string",
+      "category": "derived",
+      "description": "resolution method used for the final geometry assignment",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\country_centroids_augmented.csv"
+      ]
+    },
+    "resolution_path": {
+      "type": "string",
+      "category": "derived",
+      "description": "resolution path used to obtain the final code assignment",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\country_centroids_augmented.csv"
+      ]
+    },
+    "resolved": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether a code was resolved to a usable geometry",
+      "is_canonical": true,
+      "usage_count_in_code": 15,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_resolution_methods.csv"
+      ]
+    },
+    "sample_rank": {
+      "type": "int",
+      "category": "derived",
+      "description": "ranking used in trajectory sampling output",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_trajectory_sample.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_trajectory_sample.csv"
+      ]
+    },
+    "sample_rule": {
+      "type": "string",
+      "category": "identifier",
+      "description": "unknown",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_trajectory_sample.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_trajectory_sample.csv"
+      ]
+    },
+    "seed": {
+      "type": "int",
+      "category": "derived",
+      "description": "bootstrap seed identifier",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_bootstrap_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_bootstrap_detail.csv"
+      ]
+    },
+    "shift_P1_1977_1988_to_P2_1989_2001_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "inter-period displacement in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "shift_P1_1977_1988_to_P2_1989_2001_rad": {
+      "type": "float",
+      "category": "derived",
+      "description": "inter-period displacement in radians",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "shift_P2_1989_2001_to_P3_2002_2009_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "inter-period displacement in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "shift_P2_1989_2001_to_P3_2002_2009_rad": {
+      "type": "float",
+      "category": "derived",
+      "description": "inter-period displacement in radians",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "shift_P3_2002_2009_to_P4_2010_2018_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "inter-period displacement in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "shift_P3_2002_2009_to_P4_2010_2018_rad": {
+      "type": "float",
+      "category": "derived",
+      "description": "inter-period displacement in radians",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "shift_P4_2010_2018_to_P5_2019_2022_km": {
+      "type": "float",
+      "category": "derived",
+      "description": "inter-period displacement in kilometers",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "shift_P4_2010_2018_to_P5_2019_2022_rad": {
+      "type": "float",
+      "category": "derived",
+      "description": "inter-period displacement in radians",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "sign": {
+      "type": "int",
+      "category": "derived",
+      "description": "direction sign for the east-west component",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_imports_1976_2023.csv"
+      ]
+    },
+    "silhouette": {
+      "type": "float",
+      "category": "derived",
+      "description": "silhouette score for the selected clustering configuration",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_silhouette.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_silhouette.csv"
+      ]
+    },
+    "silhouette_selected": {
+      "type": "float",
+      "category": "derived",
+      "description": "silhouette score attached to the selected clustering result",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_clusters.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_clusters.csv"
+      ]
+    },
+    "sitc2": {
+      "type": "int",
+      "category": "product",
+      "description": "2-digit SITC product code",
+      "is_canonical": true,
+      "usage_count_in_code": 27,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc2_1976_2023.csv"
+      ]
+    },
+    "sitc3": {
+      "type": "int",
+      "category": "product",
+      "description": "3-digit SITC product code",
+      "is_canonical": true,
+      "usage_count_in_code": 23,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc3_1976_2023.csv"
+      ]
+    },
+    "source_code": {
+      "type": "string",
+      "category": "identifier",
+      "description": "original source code before mapping or resolution",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_resolution_methods.csv"
+      ]
+    },
+    "star_lat": {
+      "type": "float",
+      "category": "geographic",
+      "description": "attractor latitude",
+      "is_canonical": true,
+      "usage_count_in_code": 9,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "star_lon": {
+      "type": "float",
+      "category": "geographic",
+      "description": "attractor longitude",
+      "is_canonical": true,
+      "usage_count_in_code": 9,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "star_x": {
+      "type": "float",
+      "category": "geographic",
+      "description": "attractor x coordinate",
+      "is_canonical": true,
+      "usage_count_in_code": 7,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "star_y": {
+      "type": "float",
+      "category": "geographic",
+      "description": "attractor y coordinate",
+      "is_canonical": true,
+      "usage_count_in_code": 7,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "star_z": {
+      "type": "float",
+      "category": "geographic",
+      "description": "attractor z coordinate",
+      "is_canonical": true,
+      "usage_count_in_code": 7,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_attractors.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_attractors.csv"
+      ]
+    },
+    "start_year": {
+      "type": "int",
+      "category": "time",
+      "description": "first year in the observation sequence",
+      "is_canonical": true,
+      "usage_count_in_code": 3,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_indices_imports_1976_2023.csv"
+      ]
+    },
+    "std_speed_km_per_year": {
+      "type": "float",
+      "category": "derived",
+      "description": "standard deviation of trajectory speed in kilometers per year",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "straightness": {
+      "type": "float",
+      "category": "derived",
+      "description": "ratio between net displacement and path length",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_features_country_flow.csv"
+      ]
+    },
+    "t0": {
+      "type": "int",
+      "category": "time",
+      "description": "unknown",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_imports_1976_2023.csv"
+      ]
+    },
+    "t1": {
+      "type": "int",
+      "category": "time",
+      "description": "unknown",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_exports_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\06_drift\\data\\drift_steps_imports_1976_2023.csv"
+      ]
+    },
+    "target_has_manual": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether the mapped target has manual centroid support",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_historic_mapping_report.csv"
+      ]
+    },
+    "target_in_ne": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether the mapped target exists in Natural Earth",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_historic_mapping_report.csv"
+      ]
+    },
+    "target_is_territory_fallback": {
+      "type": "bool",
+      "category": "derived",
+      "description": "whether the mapped target uses a territory fallback",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_historic_mapping_report.csv"
+      ]
+    },
+    "territory_maps_to": {
+      "type": "string",
+      "category": "derived",
+      "description": "territory fallback mapped target",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes_from_natural_earth.csv"
+      ]
+    },
+    "territory_target_in_ne": {
+      "type": "string",
+      "category": "derived",
+      "description": "whether the territory target exists in Natural Earth",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\01_geo\\data\\audit_missing_codes_from_natural_earth.csv"
+      ]
+    },
+    "total_exports": {
+      "type": "float",
+      "category": "trade",
+      "description": "total exports value in the output scope",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_country_year_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc2_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc3_1976_2023.csv"
+      ]
+    },
+    "total_exports_value_final_matched": {
+      "type": "float",
+      "category": "trade",
+      "description": "matched export total using canonical trade value",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 253,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "total_exports_value_matched": {
+      "type": "float",
+      "category": "trade",
+      "description": "matched export total in the global barycenter output",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "total_imports": {
+      "type": "float",
+      "category": "trade",
+      "description": "total imports value in the output scope",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_country_year_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc2_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_global_sitc3_1976_2023.csv"
+      ]
+    },
+    "total_imports_value_final_matched": {
+      "type": "float",
+      "category": "trade",
+      "description": "matched import total using canonical trade value",
+      "is_canonical": true,
+      "usage_count_in_code": 5,
+      "observed_in_output_files": 253,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "total_imports_value_matched": {
+      "type": "float",
+      "category": "trade",
+      "description": "matched import total in the global barycenter output",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "total_trade_value": {
+      "type": "float",
+      "category": "trade",
+      "description": "total trade value processed in a diagnostic year",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_diagnostics_1976_2023.csv"
+      ]
+    },
+    "total_us_exports_value_final_matched": {
+      "type": "float",
+      "category": "trade",
+      "description": "legacy USA matched export total",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_usa_trade_1976_2023.csv"
+      ]
+    },
+    "total_us_imports_value_final_matched": {
+      "type": "float",
+      "category": "trade",
+      "description": "legacy USA matched import total",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_usa_trade_1976_2023.csv"
+      ]
+    },
+    "trade_balance": {
+      "type": "float",
+      "category": "trade",
+      "description": "exports minus imports",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\country_trade_totals_value_final.csv"
+      ]
+    },
+    "trade_year_end": {
+      "type": "int",
+      "category": "time",
+      "description": "unknown",
+      "is_canonical": true,
+      "usage_count_in_code": 19,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "trade_year_start": {
+      "type": "int",
+      "category": "time",
+      "description": "unknown",
+      "is_canonical": true,
+      "usage_count_in_code": 19,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_summary.csv"
+      ]
+    },
+    "unmatched_export_partners_sample": {
+      "type": "float",
+      "category": "trade",
+      "description": "sample of export partners without locatable geometry",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "unmatched_exporter_codes_sample": {
+      "type": "float",
+      "category": "trade",
+      "description": "sample of exporter codes without locatable geometry",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "unmatched_import_partners_sample": {
+      "type": "float",
+      "category": "trade",
+      "description": "sample of import partners without locatable geometry",
+      "is_canonical": true,
+      "usage_count_in_code": 2,
+      "observed_in_output_files": 254,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AFG_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AGO_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_AIA_1976_2023.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ALB_1976_2023.csv"
+      ]
+    },
+    "unmatched_importer_codes_sample": {
+      "type": "float",
+      "category": "trade",
+      "description": "sample of importer codes without locatable geometry",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_imports_exports_1976_2023.csv"
+      ]
+    },
+    "value_exporter": {
+      "type": "float",
+      "category": "trade",
+      "description": "export-side raw trade value",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "data\\incoming\\trade_s2_v001\\raw\\dataverse_files\\S2_1976.parquet"
+      ]
+    },
+    "value_final": {
+      "type": "float",
+      "category": "trade",
+      "description": "canonical trade value used by the pipeline",
+      "is_canonical": true,
+      "usage_count_in_code": 24,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "data\\incoming\\trade_s2_v001\\raw\\dataverse_files\\S2_1976.parquet"
+      ]
+    },
+    "value_importer": {
+      "type": "float",
+      "category": "trade",
+      "description": "import-side raw trade value",
+      "is_canonical": true,
+      "usage_count_in_code": 0,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "data\\incoming\\trade_s2_v001\\raw\\dataverse_files\\S2_1976.parquet"
+      ]
+    },
+    "value_missing_distance": {
+      "type": "float",
+      "category": "trade",
+      "description": "trade value associated with missing distance information",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\07_distance\\data\\distance_diagnostics_1976_2023.csv"
+      ]
+    },
+    "variance_H0": {
+      "type": "float",
+      "category": "derived",
+      "description": "expected variance under the null hypothesis",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 4,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "weight": {
+      "type": "float",
+      "category": "derived",
+      "description": "trajectory or observation weight",
+      "is_canonical": true,
+      "usage_count_in_code": 4,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_state_long.csv"
+      ]
+    },
+    "window_ARI_vs_full_max": {
+      "type": "float",
+      "category": "derived",
+      "description": "maximum window ARI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "window_ARI_vs_full_mean": {
+      "type": "float",
+      "category": "derived",
+      "description": "mean window ARI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "window_ARI_vs_full_min": {
+      "type": "float",
+      "category": "derived",
+      "description": "minimum window ARI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "window_ARI_vs_full_std": {
+      "type": "float",
+      "category": "derived",
+      "description": "standard deviation of window ARI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "window_NMI_vs_full_max": {
+      "type": "float",
+      "category": "derived",
+      "description": "maximum window NMI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "window_NMI_vs_full_mean": {
+      "type": "float",
+      "category": "derived",
+      "description": "mean window NMI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "window_NMI_vs_full_min": {
+      "type": "float",
+      "category": "derived",
+      "description": "minimum window NMI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "window_NMI_vs_full_std": {
+      "type": "float",
+      "category": "derived",
+      "description": "standard deviation of window NMI against full clustering",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_stability_summary.csv"
+      ]
+    },
+    "window_id": {
+      "type": "int",
+      "category": "identifier",
+      "description": "temporal window identifier",
+      "is_canonical": true,
+      "usage_count_in_code": 1,
+      "observed_in_output_files": 2,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_exports_window_detail.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_imports_window_detail.csv"
+      ]
+    },
+    "x": {
+      "type": "float",
+      "category": "geographic",
+      "description": "x coordinate on the unit sphere or projected trajectory space",
+      "is_canonical": true,
+      "usage_count_in_code": 34,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_state_long.csv"
+      ]
+    },
+    "y": {
+      "type": "float",
+      "category": "geographic",
+      "description": "y coordinate on the unit sphere or projected trajectory space",
+      "is_canonical": true,
+      "usage_count_in_code": 47,
+      "observed_in_output_files": 1,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_state_long.csv"
+      ]
+    },
+    "year": {
+      "type": "int",
+      "category": "time",
+      "description": "observation year",
+      "is_canonical": true,
+      "usage_count_in_code": 151,
+      "observed_in_output_files": 271,
+      "observed_in_paths_sample": [
+        "data\\incoming\\trade_s2_v001\\raw\\dataverse_files\\S2_1976.parquet",
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\country_trade_totals_value_final.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_long.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\02_validation\\data\\schema_validation_report.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\03_barycenters\\data\\barycenter_ABW_1976_2023.csv"
+      ]
+    },
+    "z": {
+      "type": "float",
+      "category": "geographic",
+      "description": "z-score or z coordinate depending on dataset context",
+      "is_canonical": true,
+      "usage_count_in_code": 30,
+      "observed_in_output_files": 5,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\04_clustering\\data\\gc_state_long.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    },
+    "zero_share": {
+      "type": "float",
+      "category": "trade",
+      "description": "share of zero-valued observations",
+      "is_canonical": true,
+      "usage_count_in_code": 6,
+      "observed_in_output_files": 3,
+      "observed_in_paths_sample": [
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_global_S2_1976_2023_normal_inference_extended.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc2_S2_1976_2023_normal_inference.csv",
+        "runs\\trade_s2_v001\\final\\artifacts\\05_moran\\data\\moran_sitc3_S2_1976_2023_normal_inference.csv"
+      ]
+    }
+  },
+  "groups": {
+    "identifiers": [
+      "attractor_type",
+      "cluster",
+      "code",
+      "country",
+      "country_code",
+      "destination",
+      "exporter",
+      "flow",
+      "importer",
+      "linkage",
+      "method",
+      "origin",
+      "path",
+      "product_code",
+      "sample_rule",
+      "source_code",
+      "window_id"
+    ],
+    "trade": [
+      "exp_zero_share",
+      "exports",
+      "global_exports_minus_imports",
+      "global_total_exports",
+      "global_total_imports",
+      "imp_zero_share",
+      "imports",
+      "n_export_partners_total",
+      "n_export_partners_unmatched",
+      "n_exporter_nodes_matched",
+      "n_exporter_nodes_total",
+      "n_exporter_nodes_unmatched",
+      "n_import_partners_total",
+      "n_import_partners_unmatched",
+      "n_importer_nodes_matched",
+      "n_importer_nodes_total",
+      "n_importer_nodes_unmatched",
+      "p_value",
+      "total_exports",
+      "total_exports_value_final_matched",
+      "total_exports_value_matched",
+      "total_imports",
+      "total_imports_value_final_matched",
+      "total_imports_value_matched",
+      "total_trade_value",
+      "total_us_exports_value_final_matched",
+      "total_us_imports_value_final_matched",
+      "trade_balance",
+      "unmatched_export_partners_sample",
+      "unmatched_exporter_codes_sample",
+      "unmatched_import_partners_sample",
+      "unmatched_importer_codes_sample",
+      "value_exporter",
+      "value_final",
+      "value_importer",
+      "value_missing_distance",
+      "zero_share"
+    ],
+    "products": [
+      "commoditycode",
+      "sitc2",
+      "sitc3"
+    ],
+    "derived": [
+      "ARI_vs_full",
+      "EW_index",
+      "NMI_vs_full",
+      "P1_1977_1988_nobs",
+      "P1_1977_1988_x",
+      "P1_1977_1988_y",
+      "P1_1977_1988_z",
+      "P2_1989_2001_nobs",
+      "P2_1989_2001_x",
+      "P2_1989_2001_y",
+      "P2_1989_2001_z",
+      "P3_2002_2009_nobs",
+      "P3_2002_2009_x",
+      "P3_2002_2009_y",
+      "P3_2002_2009_z",
+      "P4_2010_2018_nobs",
+      "P4_2010_2018_x",
+      "P4_2010_2018_y",
+      "P4_2010_2018_z",
+      "P5_2019_2022_nobs",
+      "P5_2019_2022_x",
+      "P5_2019_2022_y",
+      "P5_2019_2022_z",
+      "alpha_pos",
+      "assigned_from",
+      "avg_export_distance_km",
+      "avg_import_distance_km",
+      "avg_speed_km",
+      "bearing_circ_var",
+      "bearing_deg",
+      "bearing_mean_deg",
+      "bootstrap_ARI_vs_full_max",
+      "bootstrap_ARI_vs_full_mean",
+      "bootstrap_ARI_vs_full_min",
+      "bootstrap_ARI_vs_full_std",
+      "bootstrap_NMI_vs_full_max",
+      "bootstrap_NMI_vs_full_mean",
+      "bootstrap_NMI_vs_full_min",
+      "bootstrap_NMI_vs_full_std",
+      "canonical_column_count",
+      "canonical_columns",
+      "ci_5",
+      "ci_95",
+      "column_name",
+      "column_type",
+      "dir_lat",
+      "dir_lon",
+      "dir_x",
+      "dir_y",
+      "dir_z",
+      "dist_km",
+      "distance_km",
+      "east_km",
+      "end_year",
+      "end_year_max",
+      "end_year_min",
+      "exp_not_locatable_codes",
+      "extra_vs_canonical",
+      "files_checked",
+      "final_distance_to_star_km",
+      "global_export_distance_km",
+      "global_export_minus_import_distance_km",
+      "global_import_distance_km",
+      "has_manual_centroid",
+      "historic_code",
+      "historic_in_ne",
+      "historic_in_your_codes",
+      "historic_maps_to",
+      "historic_target_in_ne",
+      "imp_not_locatable_codes",
+      "instability_index",
+      "is_historic",
+      "is_territory_fallback",
+      "issue_files",
+      "k",
+      "k_selected",
+      "lat",
+      "lat_exports",
+      "lat_imports",
+      "lat_us_exports",
+      "lat_us_imports",
+      "lon",
+      "lon_exports",
+      "lon_imports",
+      "lon_us_exports",
+      "lon_us_imports",
+      "mapped_target_in_natural_earth",
+      "maps_to",
+      "mean_H0",
+      "mean_abs_turn_deg",
+      "mean_speed_km_per_year",
+      "median_distance_km",
+      "median_speed_km",
+      "min_overlap_steps",
+      "min_overlap_years",
+      "missing_files",
+      "missing_files_count",
+      "missing_penalty_used",
+      "missing_required",
+      "missing_vs_canonical",
+      "moran_i",
+      "n",
+      "n_cols",
+      "n_countries",
+      "n_country_year_obs",
+      "n_endpoints_used",
+      "n_flows",
+      "n_lastdirs_used",
+      "n_missing_distance",
+      "n_obs",
+      "n_steps",
+      "name",
+      "net_disp_km",
+      "net_disp_rad",
+      "ok",
+      "ok_files",
+      "path_len_km",
+      "path_len_rad",
+      "q25_distance_km",
+      "q75_distance_km",
+      "readable",
+      "resolution_method",
+      "resolution_path",
+      "resolved",
+      "sample_rank",
+      "seed",
+      "shift_P1_1977_1988_to_P2_1989_2001_km",
+      "shift_P1_1977_1988_to_P2_1989_2001_rad",
+      "shift_P2_1989_2001_to_P3_2002_2009_km",
+      "shift_P2_1989_2001_to_P3_2002_2009_rad",
+      "shift_P3_2002_2009_to_P4_2010_2018_km",
+      "shift_P3_2002_2009_to_P4_2010_2018_rad",
+      "shift_P4_2010_2018_to_P5_2019_2022_km",
+      "shift_P4_2010_2018_to_P5_2019_2022_rad",
+      "sign",
+      "silhouette",
+      "silhouette_selected",
+      "star_lat",
+      "star_lon",
+      "star_x",
+      "star_y",
+      "star_z",
+      "start_year",
+      "std_speed_km_per_year",
+      "straightness",
+      "t0",
+      "t1",
+      "target_has_manual",
+      "target_in_ne",
+      "target_is_territory_fallback",
+      "territory_maps_to",
+      "territory_target_in_ne",
+      "trade_year_end",
+      "trade_year_start",
+      "variance_H0",
+      "weight",
+      "window_ARI_vs_full_max",
+      "window_ARI_vs_full_mean",
+      "window_ARI_vs_full_min",
+      "window_ARI_vs_full_std",
+      "window_NMI_vs_full_max",
+      "window_NMI_vs_full_mean",
+      "window_NMI_vs_full_min",
+      "window_NMI_vs_full_std",
+      "x",
+      "y",
+      "year",
+      "z"
+    ]
+  },
+  "rules": {
+    "naming_style": "snake_case",
+    "no_abbreviations": false,
+    "reserved_variables": [
+      "year",
+      "exporter",
+      "importer",
+      "commoditycode",
+      "value_final",
+      "country",
+      "code",
+      "flow",
+      "lat",
+      "lon",
+      "sitc2",
+      "sitc3"
+    ]
+  },
+  "inconsistencies": [
+    {
+      "type": "naming_pattern",
+      "variables": [
+        "commoditycode",
+        "product_code"
+      ],
+      "issue": "raw product identifier uses compact legacy naming while dictionary outputs use snake_case"
+    },
+    {
+      "type": "duplicated_meaning",
+      "variables": [
+        "code",
+        "country",
+        "origin",
+        "destination",
+        "exporter",
+        "importer"
+      ],
+      "issue": "multiple identifier fields represent country-like entities under different names depending on stage context"
+    },
+    {
+      "type": "naming_pattern",
+      "variables": [
+        "total_exports_value_matched",
+        "total_exports_value_final_matched",
+        "total_imports_value_matched",
+        "total_imports_value_final_matched"
+      ],
+      "issue": "global barycenter outputs omit the _final_ token while per-country barycenter outputs include it"
+    },
+    {
+      "type": "legacy_special_case",
+      "variables": [
+        "lat_us_exports",
+        "lon_us_exports",
+        "lat_us_imports",
+        "lon_us_imports",
+        "total_us_exports_value_final_matched",
+        "total_us_imports_value_final_matched"
+      ],
+      "issue": "USA compatibility outputs embed a country-specific token in the variable name instead of using the generic barycenter schema"
+    },
+    {
+      "type": "abbreviation",
+      "variables": [
+        "EW_index",
+        "ARI_vs_full",
+        "NMI_vs_full",
+        "exp_zero_share",
+        "imp_zero_share"
+      ],
+      "issue": "abbreviations and acronyms appear in several derived variables, so naming is not uniformly verbose"
+    },
+    {
+      "type": "case_mixing",
+      "variables": [
+        "mean_H0",
+        "variance_H0"
+      ],
+      "issue": "mixed lowercase and uppercase suffixes break strict snake_case consistency"
+    },
+    {
+      "type": "dynamic_columns",
+      "variables": [
+        "country-code matrix headers"
+      ],
+      "issue": "clustering distance matrices use dynamic ISO3 country codes as column headers; these are entity-instance headers rather than stable semantic variable names"
+    },
+    {
+      "type": "used_but_not_defined_canonically",
+      "variables": [
+        "value_exporter",
+        "value_importer"
+      ],
+      "issue": "raw parquet includes exporter-side and importer-side value columns, but canonical downstream stages standardize on value_final"
+    }
+  ]
+}

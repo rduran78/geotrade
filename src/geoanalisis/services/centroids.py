@@ -136,6 +136,11 @@ MANUAL_CENTROIDS = {
     "TKL": (-9.2002, -171.8484),
     "FRO": (62.0079, -6.7900),
     "BVT": (-54.4208, 3.3464),
+    # Metropolitan European France centroid estimated in the experimental France correction workflow from the
+    # ne_10m_admin_0_map_units FXX geometry. This overrides the 110m FRA
+    # centroid used analytically because the low-resolution Natural Earth FRA
+    # geometry is pulled away from metropolitan Europe by overseas territories.
+    "FRA": (46.55495406234366, 2.546379542633307),
 }
 
 
@@ -435,7 +440,7 @@ def plot_centroid_diagnostics(
 
     crs_world = "+proj=eqearth +datum=WGS84 +units=m +no_defs"
     world = gpd.read_file(shapefile_path)
-    world = world[world["ISO_A3"] != "ATA"].copy()
+    world = world[world["ADM0_A3"].astype(str) != "ATA"].copy()
     if world.crs is None:
         world = world.set_crs("EPSG:4326")
     else:
@@ -445,9 +450,7 @@ def plot_centroid_diagnostics(
     )
     world_m = world.to_crs(crs_world)
     g_cent_m = g_cent.to_crs(crs_world)
-    iso = world["ISO_A3"].astype(str)
-    adm = world["ADM0_A3"].astype(str)
-    ne_code = iso.where(iso != "-99", adm)
+    ne_code = world["ADM0_A3"].astype(str)
     ne_codes = set(ne_code.unique())
     has_resolution_method = "resolution_method" in g_cent.columns
     has_assigned_from = "assigned_from" in g_cent.columns

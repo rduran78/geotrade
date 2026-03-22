@@ -1,226 +1,486 @@
-# GeoTrade — Global Trade Barycenter Analysis
+﻿# Geoanalisis
 
-GeoTrade is a modular research pipeline for studying the geography of international trade. The project reconstructs annual trade barycenters from bilateral trade flows, tracks how those barycenters move over time, and evaluates whether the global trade system appears to organize around one dominant attractor or multiple attractors.
+Geoanalisis is a research pipeline for reconstructing the geography of trade
+from bilateral trade data. The canonical codebase now contains two connected
+layers:
 
-The current codebase is the refactored production pipeline built in `Geoanalisis/` from the legacy notebook workflow in `trade/`. The legacy notebook remains intact; the modular pipeline is the maintained execution path.
+- a country-level pipeline in Stages 01-07
+- a block-level pipeline in Stages 08-12
 
-## Authors
+The repository also includes a `sandbox/` area with experimental runs and audit
+material. The canonical pipeline under `src/geoanalisis/` is the maintained
+execution path for reproducible work.
 
-Roberto Durán-Fernández  
-Inter-American Development Bank
+## Versioning
 
-Pablo García  
-Inter-American Development Bank
+This repository is now being published as a second canonical version.
 
-David Figueroa  
-Université Paris I Panthéon-Sorbonne
+- `v1.0.0` preserves the originally published country-level pipeline centered on
+  Stages 01-07
+- `v2.0.0` extends the canonical pipeline to Stages 01-12 and adds the
+  integrated block-analysis branch
 
-## Project Overview
+Expected differences between `v1` and `v2` are methodologically legitimate in
+the following areas:
 
-The core research question is:
+- France (`FRA`) analytical geography, due to the metropolitan-France centroid
+  override
+- `XIN`, due to its explicit treatment as a single-country control block
+- all Stage 08-12 outputs, because those stages do not exist in `v1`
 
-- how do global and country-level trade barycenters evolve over time?
-- do those trajectories converge toward a single dominant pole or toward multiple poles?
+## Project Scope
 
-The pipeline converts bilateral trade panels into geographic trajectories, spatial dependence diagnostics, drift measures, and trade-distance metrics. It is designed so a user can reproduce the workflow from raw inputs without relying on previously generated outputs.
+The project studies how trade is organized in geographic space through:
 
-## Pipeline Architecture
-
-The pipeline is organized into seven sequential stages under `src/geoanalisis/pipelines`.
-
-### Stage 01 — Geographic preprocessing
-
-Builds the geographic base layer used by the rest of the project:
-
-- loads country and reference code dictionaries
-- downloads or reads Natural Earth administrative boundaries
-- computes country centroids
-- resolves historic and special codes where possible
-- generates the origin-destination distance matrix
-
-Main outputs:
-
-- `country_centroids_augmented.csv`
-- `OD_Matrix.csv`
-- geographic audit tables
-- diagnostic centroid maps
-
-### Stage 02 — Trade panel validation
-
-Checks the annual trade parquet files and constructs reusable reference outputs:
-
-- validates schema consistency across yearly `S2_YYYY.parquet` files
-- exports country and product dictionaries
-- computes country-year trade totals
-
-Main outputs:
-
-- schema validation tables
-- `country_trade_totals_value_final.csv`
-- country and product code dictionaries
-
-### Stage 03 — Barycenter computation and visualization
-
-Transforms bilateral trade flows into geographic centers of gravity:
-
-- computes global export and import barycenters by year
-- computes country-level barycenter trajectories
-- exports canonical USA and China special outputs
-- generates canonical barycenter maps and additional trajectory visualizations
-
-Main outputs:
-
-- `barycenter_imports_exports_1976_2023.csv`
-- `barycenter_<ISO3>_1976_2023.csv`
-- `barycenter_usa_trade_1976_2023.csv`
-- `barycenter_china_trade_1976_2023.csv`
-- Stage 03 PNG visualizations
-
-### Stage 04 — Trajectory clustering and attractor estimation
-
-Analyzes whether country barycenter trajectories organize around common poles:
-
-- assembles barycenter state trajectories
-- computes pairwise trajectory distances
-- clusters export and import trajectories separately
-- estimates endpoint-based attractor prototypes by cluster
-- produces attractor maps, representative trajectories, and convergence diagnostics
-
-Main outputs:
-
-- `gc_state_long.csv`
-- `gc_features_country_flow.csv`
-- `gc_*_clusters.csv`
-- `gc_*_attractors.csv`
-- `gc_stability_summary.csv`
-- Stage 04 PNG visualizations
-
-### Stage 05 — Moran spatial autocorrelation analysis
-
-Measures spatial autocorrelation in trade outcomes:
-
-- computes global Moran's I for exports and imports
-- computes product-level Moran statistics for SITC2 and SITC3
-- renders labeled Moran heatmaps
-
-Main outputs:
-
-- `moran_global_S2_1976_2023_normal_inference.csv`
-- `moran_sitc2_S2_1976_2023_normal_inference.csv`
-- `moran_sitc3_S2_1976_2023_normal_inference.csv`
-- Stage 05 PNG figures
-
-### Stage 06 — Drift analysis
-
-Quantifies how barycenter positions shift from year to year:
-
-- computes stepwise trajectory movement
-- summarizes speed, directional drift, and instability
-- supports both baseline-compatible `legacy_focus` mode and expanded coverage mode
-
-Main outputs:
-
-- `drift_steps_exports_1976_2023.csv`
-- `drift_steps_imports_1976_2023.csv`
-- `drift_indices_exports_1976_2023.csv`
-- `drift_indices_imports_1976_2023.csv`
-- Stage 06 PNG maps
-
-### Stage 07 — Distance metrics and diagnostics
-
-Measures the geographic reach of trade:
-
-- computes average trade distance by country-year
-- computes global average trade distance
-- computes SITC2 and SITC3 distance summaries
-- exports diagnostic coverage tables and figures
-
-Main outputs:
-
-- `distance_country_year_1976_2023.csv`
-- `distance_global_1976_2023.csv`
-- `distance_global_sitc2_1976_2023.csv`
-- `distance_global_sitc3_1976_2023.csv`
-- `distance_diagnostics_1976_2023.csv`
+- country centroids and origin-destination distances
+- global and country-level trade barycenters
+- trajectory clustering and drift
+- spatial autocorrelation with Moran's I
+- average trade-distance metrics
+- trade-block statistics, barycenters, distance, and Moran diagnostics
 
 ## Repository Structure
 
-The repository is organized so code, reference inputs, and documentation are kept under version control, while raw parquet data and generated results are excluded.
-
 ```text
-geotrade/
+Geoanalisis/
 ├── src/
 │   └── geoanalisis/
 │       ├── config.py
 │       ├── pipelines/
+│       │   ├── run_pipeline.py
+│       │   ├── stage_01_geo.py
+│       │   ├── stage_02_validation.py
+│       │   ├── stage_03_barycenters.py
+│       │   ├── stage_04_clustering.py
+│       │   ├── stage_05_moran.py
+│       │   ├── stage_06_drift.py
+│       │   ├── stage_07_distance.py
+│       │   ├── stage_08_block_initialization.py
+│       │   ├── stage_09_stats_blocks.py
+│       │   ├── stage_10_block_barycenters.py
+│       │   ├── stage_11_block_distance.py
+│       │   └── stage_12_block_moran.py
 │       ├── services/
+│       │   ├── centroids.py
+│       │   ├── trade_panel.py
+│       │   ├── barycenters.py
+│       │   ├── clustering.py
+│       │   ├── moran.py
+│       │   ├── drift.py
+│       │   ├── distance.py
+│       │   ├── block_initialization.py
+│       │   ├── block_stats.py
+│       │   ├── block_stats_paths.py
+│       │   ├── block_barycenters.py
+│       │   ├── block_barycenters_paths.py
+│       │   ├── block_distance.py
+│       │   ├── block_distance_paths.py
+│       │   ├── block_moran.py
+│       │   └── block_moran_paths.py
 │       └── utils/
+│           ├── paths.py
+│           └── run_structure.py
 ├── data/
-│   └── incoming/
-│       └── trade_s2_v001/
-│           └── raw/
-│               └── reference/
+│   ├── incoming/
+│   │   ├── trade_s2_v001/
+│   │   │   └── raw/
+│   │   │       ├── dataverse_files/        # large parquet inputs, not tracked
+│   │   │       └── reference/              # lightweight tracked references
+│   │   └── trade_s2_v003/                  # exploratory / review branch
+│   └── external/
+│       └── natural_earth/                  # local geographic inputs
 ├── docs/
-│   └── codex_sessions/
+│   ├── codex_sessions/
+│   └── schema/
+│       └── canonical_variable_schema.json
 ├── notebooks/
 │   ├── exploratory/
 │   └── reporting/
+├── runs/
+│   └── trade_s2_v001/                      # generated canonical runs
+├── sandbox/                                # experimental runs and audits
 ├── run_full_pipeline_with_progress.py
 ├── requirements.txt
 └── README.md
 ```
 
-Key policy:
+## Pipeline Overview
 
-- raw trade parquet datasets are not included
-- downloaded external geographic files are not included
-- run outputs under `runs/` are not included
-- generated figures, CSV outputs, logs, and reports are not included
+### Stage 01 - Geographic preprocessing
 
-Included reference inputs:
+Purpose:
+
+- download or read the Natural Earth 110m world layer
+- compute country centroids
+- resolve missing and historical codes where possible
+- build the OD matrix used downstream
+
+Primary inputs:
 
 - `data/incoming/trade_s2_v001/raw/reference/codes.csv`
 - `data/incoming/trade_s2_v001/raw/reference/country_code_iso.txt`
+- Natural Earth 110m countries shapefile under `data/external/`
+
+Primary outputs:
+
+- `country_centroids_augmented.csv`
+- `OD_Matrix.csv`
+- geographic audit CSVs
+- centroid diagnostic figures
+
+### Stage 02 - Trade panel validation
+
+Purpose:
+
+- validate yearly parquet schema consistency
+- build country and product dictionaries
+- compute country-year trade totals
+
+Primary inputs:
+
+- `data/incoming/trade_s2_v001/raw/dataverse_files/S2_YYYY.parquet`
+- Stage 01 run context only for shared run structure, not analytical inputs
+
+Primary outputs:
+
+- schema validation report
+- country and product dictionaries
+- `country_trade_totals_value_final.csv`
+
+### Stage 03 - Country and global barycenters
+
+Purpose:
+
+- compute yearly global trade barycenters
+- compute country-level trade barycenter panels
+- generate legacy-compatible special outputs for USA and China
+
+Primary inputs:
+
+- Stage 01 centroids
+- yearly trade parquet files
+
+Primary outputs:
+
+- `barycenter_imports_exports_1976_2023.csv`
+- `barycenter_<ISO3>_1976_2023.csv`
+- `barycenter_usa_trade_1976_2023.csv`
+- `barycenter_china_trade_1976_2023.csv`
+- Stage 03 figures
+
+### Stage 04 - Trajectory clustering
+
+Purpose:
+
+- assemble trade-barycenter trajectories
+- compute pairwise distance matrices
+- cluster trajectory behavior
+- estimate attractor prototypes and stability
+
+Primary inputs:
+
+- Stage 03 country barycenter files
+- Natural Earth 110m map layer for rendering
+
+Primary outputs:
+
+- `gc_state_long.csv`
+- `gc_features_country_flow.csv`
+- clustering, attractor, overlap, and stability CSVs
+- Stage 04 figures
+
+### Stage 05 - Moran's I for country trade geography
+
+Purpose:
+
+- compute global Moran's I for exports and imports
+- compute SITC2 and SITC3 Moran tables
+- render Moran line charts and heatmaps
+
+Primary inputs:
+
+- Stage 01 OD matrix
+- yearly trade parquet files
+- SITC label files from `data/incoming/.../reference`
+
+Primary outputs:
+
+- `moran_global_S2_1976_2023_normal_inference.csv`
+- `moran_global_S2_1976_2023_normal_inference_extended.csv`
+- `moran_sitc2_S2_1976_2023_normal_inference.csv`
+- `moran_sitc3_S2_1976_2023_normal_inference.csv`
+- Stage 05 figures
+
+### Stage 06 - Drift and speed
+
+Purpose:
+
+- convert barycenter panels into stepwise movement series
+- derive drift indices and map outputs
+
+Primary inputs:
+
+- Stage 03 barycenter panels
+
+Primary outputs:
+
+- `drift_steps_exports_1976_2023.csv`
+- `drift_steps_imports_1976_2023.csv`
+- `drift_indices_exports_1976_2023.csv`
+- `drift_indices_imports_1976_2023.csv`
+- Stage 06 figures
+
+### Stage 07 - Distance metrics
+
+Purpose:
+
+- compute average trade distance by country and year
+- compute global distance summaries
+- compute SITC2 and SITC3 distance summaries
+
+Primary inputs:
+
+- Stage 01 OD matrix
+- yearly trade parquet files
+- SITC label files
+
+Primary outputs:
+
+- `distance_country_year_1976_2023.csv`
+- `distance_global_1976_2023.csv`
+- `distance_global_sitc2_1976_2023.csv`
+- `distance_global_sitc3_1976_2023.csv`
+- diagnostics and figures
+
+### Stage 08 - Block initialization
+
+Purpose:
+
+- build a corrected world shapefile for block analysis
+- replace low-resolution France geometry with metropolitan France geometry
+- compute block centroids and block-match audits
+
+Primary inputs:
+
+- `data/incoming/trade_s2_v001/raw/reference/trade_blocks_01.csv`
+- Natural Earth 110m countries
+- Natural Earth 10m map units
+
+Primary outputs:
+
+- corrected `natural_earth_france` shapefile
+- `block_centroids.csv`
+- `block_match_audit.csv`
+- France audit files and figures
+
+### Stage 09 - Trade block statistics
+
+Purpose:
+
+- compute block-level internal, external, and total trade series
+- produce reconciliation and auditing outputs
+
+Primary inputs:
+
+- Stage 08 block initialization outputs
+- trade block reference files
+- yearly trade parquet files
+
+Primary outputs:
+
+- `block_timeseries.csv`
+- `block_external.csv`
+- `block_internal.csv`
+- detailed logs and audit tables
+
+### Stage 10 - Block barycenters
+
+Purpose:
+
+- compute country centroids for block analysis
+- compute intra-block and external block barycenters
+- render block trajectory maps
+
+Primary inputs:
+
+- Stage 08 corrected analytical shapefile
+- Stage 09 block statistics outputs
+- `trade_blocks_01.csv`
+- `descripcion_tabla_blocks.csv`
+- external 110m map layer for rendering only
+
+Primary outputs:
+
+- `country_centroids.csv`
+- `barycenters_intra_block.csv`
+- `barycenters_external.csv`
+- validation logs, assumptions, and audit outputs
+- block maps
+
+### Stage 11 - Block trade distance
+
+Purpose:
+
+- compute block-level average trade distance for external trade
+- compute SITC2 and SITC3 block-distance tables
+- generate block distance figures
+
+Primary inputs:
+
+- Stage 09 `block_external.csv`
+- Stage 10 `barycenters_external.csv`
+- Stage 10 `country_centroids.csv`
+- trade parquet files
+- block and SITC reference files
+
+Primary outputs:
+
+- `distance_block_year.csv`
+- `distance_block_sitc2.csv`
+- `distance_block_sitc3.csv`
+- `distance_diagnostics.csv`
+- figures, exclusions, and audit logs
+
+### Stage 12 - Block Moran
+
+Purpose:
+
+- compute block-level Moran diagnostics for intra-block and external structures
+- generate block-level Moran figures and audit outputs
+
+Primary inputs:
+
+- Stage 08 corrected analytical shapefile
+- Stage 09 `block_internal.csv`
+- trade parquet files
+- block and SITC reference files
+
+Primary outputs:
+
+- `od_matrix_stage12.csv`
+- `intrablock_moran_block_global.csv`
+- `external_moran_block_global.csv`
+- SITC2 and SITC3 Moran tables
+- flow dumps, figures, and audit logs
+
+## Canonical vs Sandbox
+
+The repository contains both canonical and experimental work:
+
+- `src/geoanalisis/`, `run_full_pipeline_with_progress.py`, `data/incoming`,
+  and `data/external` define the canonical reproducible pipeline
+- `sandbox/` contains experimental runs, prompts, audits, and migration
+  history; it is useful for provenance but is not required to reproduce the
+  canonical pipeline
+
+## Data Management
+
+### Included in the repository
+
+The repository is small only if version control is limited to source code,
+documentation, and lightweight reference inputs.
+
+Reference files currently suitable for tracking:
+
+- `data/incoming/trade_s2_v001/raw/reference/codes.csv`
+- `data/incoming/trade_s2_v001/raw/reference/country_code_iso.txt`
+- `data/incoming/trade_s2_v001/raw/reference/descripcion_tabla_blocks.csv`
 - `data/incoming/trade_s2_v001/raw/reference/sitc2-2digit.txt`
 - `data/incoming/trade_s2_v001/raw/reference/sitc2-3digit.txt`
+- `data/incoming/trade_s2_v001/raw/reference/trade_blocks_01.csv`
+- `docs/schema/canonical_variable_schema.json`
 
-## Data Sources
+### Not included in the repository
 
-### Trade Data
+Large or regenerated assets should not be versioned:
 
-Harvard Growth Lab at Harvard University, The. 2025. “Bilateral Trade Data Aggregated by Year.” Harvard Dataverse. https://doi.org/10.7910/DVN/5NGVOB
+- yearly trade parquet files in `data/incoming/.../raw/dataverse_files/`
+- heavy exploratory data in `data/incoming/trade_s2_v003/`
+- Natural Earth downloads under `data/external/`
+- all canonical `runs/`
+- most of `sandbox/projects/`
+- generated CSVs, PNGs, logs, and reports
 
-The raw annual parquet trade files are not distributed with this repository. Users must obtain the dataset separately from Harvard Dataverse and place the yearly `S2_YYYY.parquet` files under:
+### How to reconstruct local data
 
-```text
-data/incoming/trade_s2_v001/raw/dataverse_files/
-```
+Trade data:
 
-Expected local example:
+1. obtain the Harvard Dataverse bilateral trade parquet files
+2. place yearly `S2_YYYY.parquet` files under:
+   `data/incoming/trade_s2_v001/raw/dataverse_files/`
 
-```text
-data/incoming/trade_s2_v001/raw/dataverse_files/S2_1976.parquet
-...
-data/incoming/trade_s2_v001/raw/dataverse_files/S2_2023.parquet
-```
+Geographic data:
 
-### Geographic Data
+1. Stage 01 can download Natural Earth 110m countries if missing
+2. Stage 08 also requires the 10m map-units layer at:
+   `data/external/natural_earth/ne_10m_admin_0_map_units/`
+3. the mapping layer used by Stage 10 should exist at:
+   `data/external/natural_earth/ne_110m_admin_0_countries/`
 
-Natural Earth dataset, specifically the 1:110m Admin 0 Countries layer used by the legacy notebook through:
+## France (FRA) Treatment
 
-```text
-https://naturalearth.s3.amazonaws.com/110m_cultural/ne_110m_admin_0_countries.zip
-```
+The canonical pipeline applies a targeted analytical override for France.
 
-Natural Earth is acknowledged here as the geographic base source used for administrative boundaries and centroid derivation. The modular pipeline downloads or reads this data outside the tracked repository and stores it under `data/external/` locally.
+Analytical rule:
 
-## Installation
+- geographic analysis uses the metropolitan European France centroid
+- fixed coordinates:
+  - longitude: `2.546379542633307`
+  - latitude: `46.55495406234366`
 
-Recommended environment:
+Rationale:
 
-- Python 3.11+
-- a virtual environment
-- GDAL-compatible geospatial stack available to `geopandas`
+- the low-resolution 110m France geometry pulls the centroid away from
+  metropolitan Europe because of overseas territories
+
+Mapping rule:
+
+- map creation must use the 110m countries shapefile
+- the country join key is `ADM0_A3`
+- for France, the mapping identifier is `ADM0_A3 = FRA`
+
+Warning:
+
+- do not use `FR1` from `SOV_A3` or related sovereignty fields for joins in
+  this workflow
+
+## XIN Treatment
+
+`XIN` is a single-country control block whose anchor country is India (`IND`).
+
+Canonical handling:
+
+- Stage 10 intrablock barycenter is a static India centroid repeated across all
+  active years
+- Stage 10 external barycenters are still computed, but the anchor is the
+  India centroid rather than a multi-country block estimate
+- Stage 11 distances use the India centroid as the block-side anchor
+- Stage 12 Moran statistics are not computed for `XIN` because Moran's I is
+  not meaningful for a single-country control block
+
+This is a narrow exception and does not alter logic for other blocks.
+
+## Requirements
+
+Minimum practical environment:
+
+- Python 3.11 or newer
+- Windows-compatible geospatial stack for `geopandas`
+- enough disk space for parquet inputs, Natural Earth files, and generated runs
+
+Current Python dependencies listed in `requirements.txt`:
+
+- duckdb
+- esda
+- geopandas
+- libpysal
+- matplotlib
+- numpy
+- pandas
+- pyproj
+- requests
+- scikit-learn
+- shapely
 
 Example setup:
 
@@ -230,99 +490,97 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Core Python dependencies are listed in `requirements.txt`.
+## How to Run the Pipeline
 
-## Running the Pipeline
-
-The project includes a full-run entry point with live progress logging:
+From the repository root:
 
 ```bash
-python run_full_pipeline_with_progress.py --run-id final
+python run_full_pipeline_with_progress.py --run-id 20260322_example_full_run
 ```
 
-This executes:
+The helper runner:
 
-- `stage_01_geo`
-- `stage_02_validation`
-- `stage_03_barycenters`
-- `stage_04_clustering`
-- `stage_05_moran`
-- `stage_06_drift`
-- `stage_07_distance`
+- injects `src/` into `sys.path`
+- creates the run tree under `runs/trade_s2_v001/<run_id>/`
+- writes live progress to:
+  - `logs/progress.log`
+  - `logs/run_status.json`
 
-During execution, the pipeline writes monitoring files under:
+Outputs are written stage by stage under:
 
 ```text
-runs/<dataset_id>/<run_id>/logs/
+runs/trade_s2_v001/<run_id>/artifacts/
 ```
 
-including:
+To run selected stages programmatically, use:
 
-- `progress.log`
-- `run_status.json`
+- `src/geoanalisis/pipelines/run_pipeline.py`
 
-Results are written under:
+The dispatcher currently includes Stages 01-12.
 
-```text
-runs/<dataset_id>/<run_id>/artifacts/
-```
+## Reproducibility Notes
 
-## Reproducibility
+The project is reproducible in structure, but there are important caveats:
 
-This repository is intentionally kept lightweight:
+- `src/geoanalisis/config.py` currently hardcodes Windows absolute paths under
+  `C:\Python\Geoanalisis`
+- `requirements.txt` is not pinned by version
+- Stage 01 may download Natural Earth 110m data if missing, which introduces a
+  network dependency
+- Stage 08 requires the Natural Earth 10m map-units shapefile locally and does
+  not currently download it automatically
+- Stages 05, 09, 11, and 12 are compute-heavy and can run for a long time
+- generated runs are intentionally excluded from version control, so published
+  GitHub users must recreate outputs locally
 
-- raw parquet trade data are excluded
-- generated outputs are excluded
-- execution logs are excluded
-- the pipeline is expected to regenerate all analytical outputs from raw data and included reference dictionaries
+## Known Limitations
 
-To reproduce the workflow:
+- Stage 04 is a trajectory-similarity clustering stage; its attractors should
+  not be interpreted as literal force-model equilibria
+- Stage 05 and Stage 12 are the slowest stages
+- the repository currently contains both canonical and experimental material;
+  users interested only in the maintained pipeline should focus on `src/`,
+  `data/incoming/trade_s2_v001/raw/reference/`, and the canonical runner
+- the Git working tree may contain local integration artifacts, audit notes, or
+  experimental files that are useful internally but should be curated before
+  publication
 
-1. clone the repository
-2. install dependencies
-3. obtain the Harvard Dataverse parquet files
-4. place them under the expected local data path
-5. run the full pipeline with a new `run_id`
+## Suggested Published Entry Points
 
-The final validated reference execution produced a complete run under `runs/trade_s2_v001/final/` with all stages completed successfully.
+For third parties, the most important files are:
 
-## Current Notes and Limitations
-
-- Stage 04 clustering should be interpreted as trajectory-similarity clustering with endpoint-based attractor prototypes, not as a literal force model.
-- Stage 05 is baseline-compatible but remains the slowest stage in the current pipeline.
-- The modular pipeline preserves the legacy notebook as reference material, but the modular codebase is now the primary execution path.
-- Generated results are intentionally omitted from version control; users should expect to generate them locally.
+- `run_full_pipeline_with_progress.py`
+- `src/geoanalisis/config.py`
+- `src/geoanalisis/pipelines/run_pipeline.py`
+- `src/geoanalisis/pipelines/stage_01_geo.py` to `stage_12_block_moran.py`
+- `docs/schema/canonical_variable_schema.json`
+- `data/incoming/trade_s2_v001/raw/reference/`
 
 ## Citation
 
-If you use this codebase or reproduce the analysis, please cite:
+If you use this codebase, please cite the project and the source datasets.
 
-Durán-Fernández, Roberto; García, Pablo; Figueroa, David.  
-GeoTrade: Global Trade Barycenter Analysis Pipeline.  
-Inter-American Development Bank Research Code Repository, 2026.  
-GitHub: https://github.com/rduran78/geotrade
+Project citation:
 
-```bibtex
-@software{geotrade2026,
-author = {Durán-Fernández, Roberto and García, Pablo and Figueroa, David},
-title = {GeoTrade: Global Trade Barycenter Analysis Pipeline},
-institution = {Inter-American Development Bank},
-year = {2026},
-url = {https://github.com/rduran78/geotrade}
-}
-```
+Roberto Duran-Fernandez, Pablo Garcia, and David Figueroa.  
+Geoanalisis trade-geography pipeline.  
+Inter-American Development Bank research code repository, 2026.
 
-## Acknowledgments
-
-Trade data are sourced from:
+Trade data source:
 
 Harvard Growth Lab at Harvard University, The. 2025.  
-“Bilateral Trade Data Aggregated by Year.”  
+"Bilateral Trade Data Aggregated by Year."  
 Harvard Dataverse.  
 https://doi.org/10.7910/DVN/5NGVOB
 
-Geographic data are derived from the Natural Earth dataset.
+Geographic data source:
 
-## License / Notes
+Natural Earth.  
+Admin 0 countries and map units layers.
 
-This repository contains research code for trade geography analysis and reproducible pipeline execution. It is intended for analytical replication, extension, and methodological review rather than turnkey packaged distribution of source datasets.
+## License and Distribution Note
+
+This repository contains research code and lightweight reference inputs. It is
+intended for analytical replication, extension, and review. Large source
+datasets and generated outputs should be obtained or generated locally rather
+than distributed through GitHub.

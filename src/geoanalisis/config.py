@@ -49,6 +49,11 @@ class ProjectConfig:
         "stage_05_moran",
         "stage_06_drift",
         "stage_07_distance",
+        "stage_08_block_initialization",
+        "stage_09_stats_blocks",
+        "stage_10_block_barycenters",
+        "stage_11_block_distance",
+        "stage_12_block_moran",
     )
     run_alias_default: str = "baseline"
     run_subdirs: tuple[str, ...] = ("logs", "artifacts", "reports")
@@ -60,6 +65,11 @@ class ProjectConfig:
         "05_moran",
         "06_drift",
         "07_distance",
+        "08_block_initialization",
+        "09_stats_blocks",
+        "10_block_barycenters",
+        "11_block_distance",
+        "12_block_moran",
     )
 
     @property

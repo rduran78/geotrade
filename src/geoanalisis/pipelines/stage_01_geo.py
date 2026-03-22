@@ -6,6 +6,7 @@ import logging
 
 from geoanalisis.config import ProjectConfig
 from geoanalisis.services.centroids import (
+    MANUAL_CENTROIDS,
     build_geo_artifact_paths,
     build_od_matrix,
     ensure_natural_earth,
@@ -28,6 +29,17 @@ def run(config: ProjectConfig, run_id: str, make_figures: bool = True) -> dict[s
     codes = load_country_codes(config.dataset_reference_dir)
     shapefile_path = ensure_natural_earth(config, logger)
     _, centroids_modern = load_modern_centroids(shapefile_path)
+    fra_mask = centroids_modern["code"].astype(str).eq("FRA")
+    if not fra_mask.any():
+        raise ValueError("Natural Earth centroid load did not return FRA; cannot apply metropolitan France override.")
+    fra_lat, fra_lon = MANUAL_CENTROIDS["FRA"]
+    centroids_modern.loc[fra_mask, ["lat", "lon"]] = [fra_lat, fra_lon]
+    centroids_modern.loc[fra_mask, "assigned_from"] = "MANUAL_FRA_METROPOLITAN_OVERRIDE"
+    logger.info(
+        "Applied metropolitan France centroid override for FRA: lat=%s lon=%s",
+        fra_lat,
+        fra_lon,
+    )
     write_geo_audits(codes, centroids_modern, artifacts, logger)
     centroids = resolve_missing_centroids(codes, centroids_modern, artifacts, logger)
     centroids.to_csv(artifacts.centroids_path, index=False)

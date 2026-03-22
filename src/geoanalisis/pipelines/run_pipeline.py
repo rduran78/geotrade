@@ -15,6 +15,11 @@ from geoanalisis.pipelines import (
     stage_05_moran,
     stage_06_drift,
     stage_07_distance,
+    stage_08_block_initialization,
+    stage_09_stats_blocks,
+    stage_10_block_barycenters,
+    stage_11_block_distance,
+    stage_12_block_moran,
 )
 
 
@@ -26,6 +31,11 @@ STAGE_RUNNERS = {
     "stage_05_moran": stage_05_moran.run,
     "stage_06_drift": stage_06_drift.run,
     "stage_07_distance": stage_07_distance.run,
+    "stage_08_block_initialization": stage_08_block_initialization.run,
+    "stage_09_stats_blocks": stage_09_stats_blocks.run,
+    "stage_10_block_barycenters": stage_10_block_barycenters.run,
+    "stage_11_block_distance": stage_11_block_distance.run,
+    "stage_12_block_moran": stage_12_block_moran.run,
 }
 
 

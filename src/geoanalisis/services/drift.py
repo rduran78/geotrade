@@ -209,15 +209,15 @@ def plot_choropleths(
     tag: str,
 ) -> int:
     world = gpd.read_file(world_shapefile)
-    iso = world["ISO_A3"].astype(str)
     adm = world["ADM0_A3"].astype(str)
-    join_iso3 = np.where(iso.isin(["-99", ""]), adm, iso)
+    # Mapping joins use ADM0_A3 as the canonical ISO3 field. This is important
+    # for France, where ADM0_A3=FRA while sovereignty-related fields may carry FR1.
+    join_iso3 = adm
     world = world[join_iso3 != "ATA"].copy()
     if world.crs is None:
         world = world.set_crs("EPSG:4326")
-    iso = world["ISO_A3"].astype(str)
     adm = world["ADM0_A3"].astype(str)
-    world["_join_iso3"] = np.where(iso.isin(["-99", ""]), adm, iso)
+    world["_join_iso3"] = adm
     world_p = world.to_crs("+proj=eqearth +datum=WGS84 +units=m +no_defs")
     metrics = [
         ("avg_speed_km", "YlOrRd", None),

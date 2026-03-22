@@ -10,6 +10,7 @@ __pycache__/
 # Local virtual environments
 .venv/
 venv/
+env/
 
 # Temporary files and local caches
 *.tmp
@@ -17,6 +18,9 @@ venv/
 *.sqlite
 *.pkl
 *.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Generated outputs
 runs/
@@ -28,14 +32,15 @@ logs/
 *.parquet
 data/incoming/*/raw/dataverse_files/
 data/external/
+data/incoming/trade_s2_v003/**
 
-# Generated tabular and figure outputs
-*.csv
-*.png
-*.jpg
-*.jpeg
-*.tif
-*.tiff
+# Experimental sandbox outputs and local audit material
+sandbox/**
+integration_master_log.jsonl
+integration_status.yaml
+migration_sandbox_pipeline.txt
+Revision_Projecto.md
+Final Validation Run — Full Canonical.txt
 
 # Keep only lightweight reference inputs under data/
 !data/
@@ -44,3 +49,8 @@ data/external/
 !data/incoming/*/raw/
 !data/incoming/*/raw/reference/
 !data/incoming/*/raw/reference/**
+
+# Keep selected sandbox metadata only if intentionally tracked later
+!sandbox/SANDBOX_README.md
+!sandbox/pipeline_audit_report.md
+!sandbox/export_pipeline.yaml
